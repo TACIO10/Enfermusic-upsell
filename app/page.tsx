@@ -182,6 +182,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="fold audio-samples">
+        <div className="container">
+          <div className="fold-kicker light">Ouça agora</div>
+          <h2>Dê o play e experimente o método.</h2>
+          <p className="fold-lead">Três exemplos para você sentir como os conteúdos de enfermagem podem acompanhar sua rotina.</p>
+          <div className="audio-sample-grid">
+            {[
+              ["01", "Atenção Primária", "Revisão musical sobre os fundamentos da Atenção Primária.", "/atencao-primaria.mp3"],
+              ["02", "Os Três Pilares da Saúde", "Uma faixa para reforçar conceitos essenciais de forma mais leve.", "/tres-pilares-saude.mp3"],
+              ["03", "SUS em Ação", "Conteúdos do Sistema Único de Saúde apresentados em formato musical.", "/sus-em-acao.mp3"],
+            ].map(([number, title, description, src]) => (
+              <article className="sample-card" key={title}>
+                <div className="sample-cover"><span>{number}</span><Music2 aria-hidden="true"/><i/><i/><i/><i/><i/></div>
+                <div className="sample-copy"><small>FAIXA DE EXEMPLO</small><h3>{title}</h3><p>{description}</p></div>
+                <audio controls preload="none" aria-label={`Ouvir ${title}`}><source src={src} type="audio/mpeg"/>Seu navegador não suporta reprodução de áudio.</audio>
+                <div className="listen-anywhere"><Headphones aria-hidden="true"/><span>Ouça pelo celular ou computador</span></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="fold routine-fold">
         <div className="container">
           <div className="fold-kicker">Cabe na vida real</div>
@@ -289,4 +311,4 @@ export default function Home() {
     </main>
   );
 }
-import { CarFront, Clock3, Dumbbell, Footprints, Hospital, House, PlayCircle, Users } from "lucide-react";
+import { CarFront, Clock3, Dumbbell, Footprints, Headphones, Hospital, House, Music2, PlayCircle, Users } from "lucide-react";
