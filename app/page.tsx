@@ -104,7 +104,6 @@ export default function Home() {
             <strong>Você precisa encontrar uma forma de revisar melhor.</strong>
             <span>Foi exatamente para isso que criamos o Método da Memória Musical.</span>
           </div>
-          <p className="story-proof-note">História e imagens publicadas com base nos materiais fornecidos. Confirme datas, falas e resultado antes da divulgação definitiva.</p>
         </div>
       </section>
 
@@ -120,7 +119,6 @@ export default function Home() {
             <div><strong>XXXXX</strong><span>reproduções</span></div>
             <div><strong>XXXX</strong><span>horas estudadas</span></div>
           </div>
-          <p className="placeholder-warning">Substitua os campos acima apenas por métricas reais e verificáveis.</p>
         </div>
       </section>
 
