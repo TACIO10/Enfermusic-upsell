@@ -10,6 +10,7 @@ import "./folds.css";
 import "./authority-offer.css";
 import "./fernanda-story.css";
 import "./story-images.css";
+import "./related-icons.css";
 
 const manrope = Manrope({ variable: "--font-sans", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], style: ["normal", "italic"] });

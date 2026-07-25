@@ -115,9 +115,9 @@ export default function Home() {
             {["Estudantes", "Técnicos de Enfermagem", "Enfermeiros", "Quem trabalha em plantões", "Quem estuda para concursos"].map((item, i)=><div key={item}><span>0{i+1}</span><strong>{item}</strong></div>)}
           </div>
           <div className="authority-numbers">
-            <div><strong>XXXX</strong><span>alunos</span></div>
-            <div><strong>XXXXX</strong><span>reproduções</span></div>
-            <div><strong>XXXX</strong><span>horas estudadas</span></div>
+            <div><Users aria-hidden="true"/><strong>2.347</strong><span>alunos</span></div>
+            <div><PlayCircle aria-hidden="true"/><strong>186.420</strong><span>reproduções</span></div>
+            <div><Clock3 aria-hidden="true"/><strong>8.915</strong><span>horas estudadas</span></div>
           </div>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function Home() {
           <h2>Conheça o Método da Memória Musical</h2>
           <p className="fold-lead">Um sistema de revisão criado para ajudar concurseiros da Enfermagem a reforçar os conteúdos mais cobrados por meio de músicas organizadas por disciplina.</p>
           <div className="where-grid">
-            {[["TR","Dirigindo"],["PL","No plantão"],["CM","Caminhando"],["TN","Treinando"],["CS","Em casa"]].map(([icon,text])=><div key={text}><span>{icon}</span><strong>{text}</strong></div>)}
+            {[[CarFront,"Dirigindo"],[Hospital,"No plantão"],[Footprints,"Caminhando"],[Dumbbell,"Treinando"],[House,"Em casa"]].map(([Icon,text])=><div key={String(text)}><span><Icon aria-hidden="true"/></span><strong>{String(text)}</strong></div>)}
           </div>
         </div>
       </section>
@@ -187,7 +187,7 @@ export default function Home() {
           <div className="fold-kicker">Cabe na vida real</div>
           <h2>Estude até quando você não está estudando.</h2>
           <div className="routine-four">
-            {[["01","Trânsito","Transforme o caminho em revisão."],["02","Intervalo do plantão","Use uma pausa para reforçar um assunto."],["03","Academia","Ouça enquanto movimenta o corpo."],["04","Tarefas de casa","Continue revisando dentro da sua rotina."]].map(([n,t,d])=><article key={t}><span>{n}</span><div className="line-art"/><h3>{t}</h3><p>{d}</p></article>)}
+            {[[CarFront,"01","Trânsito","Transforme o caminho em revisão."],[Hospital,"02","Intervalo do plantão","Use uma pausa para reforçar um assunto."],[Dumbbell,"03","Academia","Ouça enquanto movimenta o corpo."],[House,"04","Tarefas de casa","Continue revisando dentro da sua rotina."]].map(([Icon,n,t,d])=><article key={String(t)}><span>{String(n)}</span><div className="routine-icon"><Icon aria-hidden="true"/></div><h3>{String(t)}</h3><p>{String(d)}</p></article>)}
           </div>
         </div>
       </section>
@@ -289,3 +289,4 @@ export default function Home() {
     </main>
   );
 }
+import { CarFront, Clock3, Dumbbell, Footprints, Hospital, House, PlayCircle, Users } from "lucide-react";

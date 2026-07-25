@@ -1,0 +1,32 @@
+.authority-numbers > div {
+  position: relative;
+}
+
+.authority-numbers svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 14px;
+  color: var(--green);
+  stroke-width: 1.6;
+}
+
+.where-grid span svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.8;
+}
+
+.routine-icon {
+  height: 112px;
+  margin: 20px 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--mint), #e8f0ef);
+}
+
+.routine-icon svg {
+  width: 47px;
+  height: 47px;
+  color: var(--teal);
+  stroke-width: 1.5;
+}
