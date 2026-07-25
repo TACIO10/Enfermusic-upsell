@@ -1,0 +1,141 @@
+.bonuses {
+  margin-top: 58px;
+}
+
+.bonuses-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.bonuses-heading > svg {
+  width: 54px;
+  height: 54px;
+  padding: 13px;
+  color: #062f3d;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.bonuses-heading span {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.bonuses-heading h3 {
+  max-width: 660px;
+  margin: 6px 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.25;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bonus-grid article {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: var(--ink);
+  background: #fff;
+  border-top: 4px solid var(--green);
+  box-shadow: 0 20px 45px rgba(0, 20, 27, .26);
+}
+
+.bonus-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  color: var(--teal);
+  background: var(--mint);
+  border-radius: 50%;
+}
+
+.bonus-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.bonus-grid article > span {
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.bonus-grid h3 {
+  min-height: 86px;
+  margin: 10px 0 18px;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.bonus-grid p,
+.bonus-grid li {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bonus-grid ul {
+  margin: 0 0 18px;
+  padding-left: 19px;
+}
+
+.bonus-grid del {
+  display: block;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #7e9196;
+  font-family: var(--font-serif);
+  font-size: 18px;
+}
+
+.bonus-grid article > strong {
+  margin-top: 5px;
+  color: var(--teal);
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+
+@media (max-width: 900px) {
+  .bonus-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .bonus-grid h3 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .bonuses-heading {
+    align-items: flex-start;
+  }
+
+  .bonuses-heading > svg {
+    width: 46px;
+    height: 46px;
+    padding: 11px;
+    flex: 0 0 auto;
+  }
+
+  .bonus-grid article {
+    padding: 25px 22px;
+  }
+}

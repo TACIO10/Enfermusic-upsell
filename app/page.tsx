@@ -289,6 +289,49 @@ export default function Home() {
         <div className="container opportunity">
           <div className="fold-kicker light">Uma oportunidade de revisar diferente</div>
           <h2>Hoje você recebe acesso completo a:</h2>
+          <div className="bonuses">
+            <div className="bonuses-heading">
+              <Gift aria-hidden="true" />
+              <div>
+                <span>Bônus exclusivos</span>
+                <h3>Ao garantir seu acesso hoje, você também recebe gratuitamente:</h3>
+              </div>
+            </div>
+            <div className="bonus-grid">
+              <article>
+                <div className="bonus-icon"><ListChecks aria-hidden="true" /></div>
+                <span>BÔNUS #1</span>
+                <h3>Checklist dos Assuntos Mais Cobrados</h3>
+                <p>Saiba exatamente quais conteúdos priorizar na sua preparação para os concursos de Enfermagem.</p>
+                <p>Você receberá um checklist organizado pelos temas com maior incidência nas provas, permitindo acompanhar sua evolução e revisar o que realmente importa.</p>
+                <del>De R$ 97,00</del>
+                <strong>GRÁTIS</strong>
+              </article>
+              <article>
+                <div className="bonus-icon"><BadgeHelp aria-hidden="true" /></div>
+                <span>BÔNUS #2</span>
+                <h3>Banco de Questões Comentadas por Tema</h3>
+                <p>Coloque seu conhecimento em prática logo após cada revisão.</p>
+                <p>Questões organizadas por disciplina, com comentários para ajudar a compreender os principais pontos cobrados pelas bancas.</p>
+                <del>De R$ 67,00</del>
+                <strong>GRÁTIS</strong>
+              </article>
+              <article>
+                <div className="bonus-icon"><MessagesSquare aria-hidden="true" /></div>
+                <span>BÔNUS #3</span>
+                <h3>Comunidade Exclusiva de Alunos</h3>
+                <p>Tenha acesso a uma comunidade exclusiva para trocar experiências, tirar dúvidas, acompanhar novidades e manter a motivação durante toda a preparação.</p>
+                <ul>
+                  <li>Compartilhe sua evolução.</li>
+                  <li>Tire dúvidas com outros alunos.</li>
+                  <li>Receba atualizações em primeira mão.</li>
+                  <li>Estude com pessoas que têm o mesmo objetivo.</li>
+                </ul>
+                <del>De R$ 37,00</del>
+                <strong>GRÁTIS</strong>
+              </article>
+            </div>
+          </div>
           <div className="opportunity-grid">
             <CheckList items={["Método da Memória Musical", "Biblioteca completa", "Atualizações", "Plataforma online", "Acesso pelo celular", "Acesso pelo computador", "Novas músicas", "Suporte"]}/>
             <div className="price-panel">
@@ -320,4 +363,4 @@ export default function Home() {
     </main>
   );
 }
-import { CarFront, Clock3, Dumbbell, Footprints, Headphones, Hospital, House, Music2, PlayCircle, Users } from "lucide-react";
+import { BadgeHelp, CarFront, Clock3, Dumbbell, Footprints, Gift, Headphones, Hospital, House, ListChecks, MessagesSquare, Music2, PlayCircle, Users } from "lucide-react";
