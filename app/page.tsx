@@ -21,7 +21,7 @@ const moments = [
 ];
 
 const faqs = [
-  ["O Método da Memória Musical® substitui meus estudos?", "Não. Ele complementa sua preparação, tornando suas revisões mais frequentes e eficientes."],
+  ["O Método da Memória Musical substitui meus estudos?", "Não. Ele complementa sua preparação, tornando suas revisões mais frequentes e eficientes."],
   ["Posso ouvir pelo celular?", "Sim. Você pode acessar a plataforma pelo celular e estudar onde estiver."],
   ["Funciona para qualquer concurso de enfermagem?", "O método foi desenvolvido para auxiliar na revisão dos conteúdos mais cobrados em concursos da área de enfermagem. Consulte as disciplinas disponíveis na plataforma e compare com o seu edital."],
   ["Preciso saber cantar?", "Não. Basta ouvir as músicas regularmente para reforçar o contato com os conteúdos."],
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span />Para concursos de enfermagem</div>
-            <h1>Descubra como concurseiros da Enfermagem estão memorizando os assuntos mais cobrados usando o <em>Método da Memória Musical®</em> — mesmo tendo apenas 1 hora por dia para estudar.</h1>
+            <h1>Descubra como concurseiros da Enfermagem estão memorizando os assuntos mais cobrados usando o <em>Método da Memória Musical</em> — mesmo tendo apenas 1 hora por dia para estudar.</h1>
             <p className="hero-lead">Uma nova forma de reforçar o que você estuda, mesmo com plantões, filhos e uma rotina apertada.</p>
             <Button>Quero memorizar melhor agora</Button>
             <p className="microcopy"><span>✓</span> Acesso pelo celular <span>✓</span> Liberação imediata</p>
@@ -138,14 +138,14 @@ export default function Home() {
           <p>Agora tente lembrar o quarto tópico do último PDF que estudou.</p>
           <strong className="difficult">Difícil?</strong>
           <p>Isso acontece porque seu cérebro guarda padrões sonoros com muito mais facilidade do que grandes blocos de texto.</p>
-          <p>Foi justamente dessa percepção que nasceu o <strong>Método da Memória Musical®.</strong></p>
+          <p>Foi justamente dessa percepção que nasceu o <strong>Método da Memória Musical.</strong></p>
         </div>
       </section>
 
       <section className="section method-intro">
         <div className="container narrow">
           <div className="section-tag">Agora você conhece a diferença</div>
-          <h2>Conheça o Método da Memória Musical®</h2>
+          <h2>Conheça o Método da Memória Musical</h2>
           <p className="method-lead">Um sistema de revisão desenvolvido para ajudar concurseiros da enfermagem a reforçar os conteúdos mais cobrados por meio de músicas criadas para facilitar a memorização.</p>
           <div className="method-uses">
             {["Enquanto dirige", "Enquanto trabalha", "Enquanto faz exercícios", "Enquanto cozinha", "Em qualquer momento livre do seu dia"].map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="container">
           <div className="library-head">
             <div><div className="section-tag">Dentro da plataforma</div><h2>Um acervo organizado pelos temas que mais importam.</h2></div>
-            <p>Você terá acesso ao Método da Memória Musical®, organizado em trilhas de revisão contendo os assuntos mais cobrados em concursos da enfermagem.</p>
+            <p>Você terá acesso ao Método da Memória Musical, organizado em trilhas de revisão contendo os assuntos mais cobrados em concursos da enfermagem.</p>
           </div>
           <div className="subject-grid">
             {subjects.map((s, i)=><div className="subject" key={s}><span>{String(i+1).padStart(2,"0")}</span><strong>{s}</strong><i>♪</i></div>)}
@@ -205,7 +205,7 @@ export default function Home() {
           <div>
             <div className="section-tag">Feito para você</div>
             <h2>Uma preparação que respeita a sua rotina.</h2>
-            <p>O Método da Memória Musical® foi criado para quem quer avançar sem transformar a preparação em mais uma fonte de exaustão.</p>
+            <p>O Método da Memória Musical foi criado para quem quer avançar sem transformar a preparação em mais uma fonte de exaustão.</p>
           </div>
           <div className="audience-list">
             {["Trabalha em plantões e tem pouco tempo","Estuda há meses, mas continua esquecendo","Está cansado de depender apenas de PDFs","Quer revisar no ônibus, na academia ou em casa","Busca uma preparação mais leve e constante"].map((x,i)=><div key={x}><span>0{i+1}</span><p>{x}</p></div>)}
@@ -216,7 +216,7 @@ export default function Home() {
       <section className="section social-proof">
         <div className="container">
           <div className="section-tag">Experiências reais</div>
-          <h2>Quem está utilizando o Método da Memória Musical®</h2>
+          <h2>Quem está utilizando o Método da Memória Musical</h2>
           <p className="section-intro">Resultados e experiências reais serão apresentados aqui com autorização dos alunos.</p>
           <div className="proof-grid">
             <div className="proof-placeholder"><span>01</span><strong>Depoimento em vídeo</strong><p>Espaço reservado para um vídeo real de aluno.</p></div>
@@ -233,12 +233,12 @@ export default function Home() {
             <div className="section-tag light">Comece hoje</div>
             <h2>Talvez sua aprovação não dependa de estudar mais.</h2>
             <p className="offer-highlight">Mas de memorizar melhor.</p>
-            <p>Tenha acesso ao Método da Memória Musical® e transforme seus momentos livres em oportunidades de revisão.</p>
+            <p>Tenha acesso ao Método da Memória Musical e transforme seus momentos livres em oportunidades de revisão.</p>
             <ul className="clean-list"><li>Conteúdos organizados por tema</li><li>Acesso prático pelo celular</li><li>Revisões em qualquer lugar</li><li>Liberação após a confirmação do pagamento</li></ul>
           </div>
           <div className="offer-card">
             <span className="offer-label">ACESSO À PLATAFORMA</span>
-            <div className="offer-logo"><span className="brand-mark"><i/><i/><i/><i/></span><strong>Memória Musical®</strong></div>
+            <div className="offer-logo"><span className="brand-mark"><i/><i/><i/><i/></span><strong>Memória Musical</strong></div>
             <p>Comece agora uma forma mais prática e constante de revisar para concursos de enfermagem.</p>
             <Button light>Sim, quero acessar agora</Button>
             <small>Ambiente seguro • Acesso pelo celular</small>
@@ -268,7 +268,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><div className="container"><a className="brand" href="#inicio"><span className="brand-mark"><i/><i/><i/><i/></span><span>MEMÓRIA <b>MUSICAL</b></span></a><p>© 2026 Método da Memória Musical®. Todos os direitos reservados.</p><p className="disclaimer">Este produto é um recurso complementar de revisão e não garante aprovação em concursos públicos. Resultados variam conforme dedicação, rotina de estudos e outros fatores individuais.</p></div></footer>
+      <footer><div className="container"><a className="brand" href="#inicio"><span className="brand-mark"><i/><i/><i/><i/></span><span>MEMÓRIA <b>MUSICAL</b></span></a><p>© 2026 Método da Memória Musical. Todos os direitos reservados.</p><p className="disclaimer">Este produto é um recurso complementar de revisão e não garante aprovação em concursos públicos. Resultados variam conforme dedicação, rotina de estudos e outros fatores individuais.</p></div></footer>
     </main>
   );
 }
