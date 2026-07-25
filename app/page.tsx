@@ -53,6 +53,61 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="fold fernanda-story">
+        <div className="container">
+          <div className="fold-kicker">Uma jornada possível</div>
+          <h2>A história da Fernanda poderia ser a sua.</h2>
+          <p className="story-subtitle">De candidata frustrada... à aprovação.</p>
+
+          <div className="story-timeline">
+            <article className="story-stage">
+              <div className="story-media study-media"><span>FOTO 01</span><strong>Mesa de estudos da Fernanda</strong><small>Insira uma foto real autorizada</small></div>
+              <div className="story-copy">
+                <div className="stage-head"><span>ETAPA 1 — ANTES</span><time>Janeiro de 2025</time></div>
+                <blockquote>“Eu estudava todos os dias... mas parecia que nunca era suficiente.”</blockquote>
+                <CheckList items={["Lia PDFs enormes.", "Fazia resumos intermináveis.", "Assistia horas de videoaulas.", "Estudava sempre que podia."]}/>
+                <p>Mas poucos dias depois... já tinha esquecido boa parte do conteúdo.</p>
+                <blockquote className="small-quote">“Na hora das questões eu sabia que tinha estudado aquele assunto, mas simplesmente não conseguia lembrar da resposta.”</blockquote>
+              </div>
+            </article>
+
+            <div className="timeline-connector"><span>↓</span></div>
+
+            <article className="story-stage reverse">
+              <div className="story-media turning-media"><img src="/memoria-musical-app.webp" alt="Aplicativo Memória Musical reproduzindo uma trilha de revisão" /></div>
+              <div className="story-copy">
+                <div className="stage-head"><span>ETAPA 2 — A VIRADA</span><time>Abril de 2025</time></div>
+                <h3>Fernanda decidiu mudar a forma de revisar.</h3>
+                <p>Ao invés de depender apenas de PDFs e resumos, começou a utilizar o Método da Memória Musical para reforçar os conteúdos durante a rotina.</p>
+                <p>Agora ela revisava:</p>
+                <CheckList items={["No trânsito.", "Enquanto tomava café.", "Nos intervalos do plantão.", "Caminhando."]}/>
+                <strong>Sem precisar encontrar horas extras para estudar.</strong>
+              </div>
+            </article>
+
+            <div className="timeline-connector"><span>↓</span></div>
+
+            <article className="story-stage">
+              <div className="story-media approved-media"><span>FOTO 03</span><strong>Fernanda aprovada</strong><small>Insira a foto real de jaleco ou roupa hospitalar</small></div>
+              <div className="story-copy">
+                <div className="stage-head"><span>ETAPA 3 — DEPOIS</span><time>Novembro de 2025</time></div>
+                <blockquote>“Na prova, a sensação foi completamente diferente.”</blockquote>
+                <p>Em várias questões, ela lembrava naturalmente dos conteúdos que havia revisado ao longo das semanas.</p>
+                <p>Em vez de tentar decorar tudo na última hora, ela havia reforçado o aprendizado continuamente.</p>
+                <div className="story-result"><span>O resultado?</span><strong>Mais segurança durante a prova e a conquista da aprovação.</strong></div>
+              </div>
+            </article>
+          </div>
+
+          <div className="story-final">
+            <p>Você não precisa estudar o dobro.</p>
+            <strong>Você precisa encontrar uma forma de revisar melhor.</strong>
+            <span>Foi exatamente para isso que criamos o Método da Memória Musical.</span>
+          </div>
+          <p className="story-proof-note">Antes de divulgar esta história como prova real, substitua os espaços pelas fotos autorizadas e confirme datas, falas e resultado.</p>
+        </div>
+      </section>
+
       <section className="fold social-first">
         <div className="container">
           <div className="fold-kicker">Criado para a rotina real</div>
