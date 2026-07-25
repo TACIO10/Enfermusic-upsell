@@ -285,19 +285,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="fold guarantee-fold">
-        <div className="container guarantee-box">
-          <div className="guarantee-seal"><strong>7</strong><span>DIAS</span></div>
-          <div>
-            <div className="fold-kicker">Risco reduzido</div>
-            <h2>Ainda está em dúvida?</h2>
-            <p>Experimente durante 7 dias.</p>
-            <p>Se perceber que o Método da Memória Musical não faz sentido para sua rotina, basta solicitar o reembolso.</p>
-            <strong>Sem perguntas.</strong>
-          </div>
-        </div>
-      </section>
-
       <section className="fold access-fold" id="acesso">
         <div className="container opportunity">
           <div className="fold-kicker light">Uma oportunidade de revisar diferente</div>
@@ -311,6 +298,19 @@ export default function Home() {
               <Button>Quero acessar agora</Button>
               <em>Acesso imediato após a confirmação</em>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="fold guarantee-fold">
+        <div className="container guarantee-box">
+          <div className="guarantee-seal"><strong>30</strong><span>DIAS</span></div>
+          <div>
+            <div className="fold-kicker">Risco reduzido</div>
+            <h2>Ainda está em dúvida?</h2>
+            <p>Experimente durante 30 dias.</p>
+            <p>Se perceber que o Método da Memória Musical não faz sentido para sua rotina, basta solicitar o reembolso.</p>
+            <strong>Sem perguntas.</strong>
           </div>
         </div>
       </section>
