@@ -55,13 +55,17 @@ export default function Home() {
 
       <section className="fold social-first">
         <div className="container">
-          <div className="fold-kicker">Resultados de alunos</div>
-          <h2>Mais de <span className="editable-number">XXX</span> concurseiros já estão utilizando o Método da Memória Musical</h2>
-          <div className="stars" aria-label="Cinco estrelas"><i/><i/><i/><i/><i/></div>
-          <p className="placeholder-warning">Substitua “XXX” pelo número real antes de divulgar.</p>
-          <div className="proof-preview-grid">
-            <ProofPlaceholder type="Depoimento" index={1}/><ProofPlaceholder type="Print" index={2}/><ProofPlaceholder type="Vídeo" index={3}/><ProofPlaceholder type="WhatsApp" index={4}/>
+          <div className="fold-kicker">Criado para a rotina real</div>
+          <h2>Para quem precisa estudar mesmo com pouco tempo.</h2>
+          <div className="credibility-audience">
+            {["Estudantes", "Técnicos de Enfermagem", "Enfermeiros", "Quem trabalha em plantões", "Quem estuda para concursos"].map((item, i)=><div key={item}><span>0{i+1}</span><strong>{item}</strong></div>)}
           </div>
+          <div className="authority-numbers">
+            <div><strong>XXXX</strong><span>alunos</span></div>
+            <div><strong>XXXXX</strong><span>reproduções</span></div>
+            <div><strong>XXXX</strong><span>horas estudadas</span></div>
+          </div>
+          <p className="placeholder-warning">Substitua os campos acima apenas por métricas reais e verificáveis.</p>
         </div>
       </section>
 
@@ -71,20 +75,6 @@ export default function Home() {
           <h2>Você já passou por isso?</h2>
           <CheckList items={["Estuda durante horas.", "Faz resumos enormes.", "Assiste videoaulas.", "Resolve questões.", "E poucos dias depois já esqueceu boa parte do conteúdo."]}/>
           <div className="exam-pain"><span>Na hora da prova...</span><p>Você sabe que estudou aquilo.</p><strong>Mas a resposta simplesmente não vem.</strong></div>
-        </div>
-      </section>
-
-      <section className="fold memory-fold">
-        <div className="container split">
-          <div className="brain-visual compact-brain"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="brain-core"><span>♪</span><small>MEMÓRIA</small><b>+</b><small>REPETIÇÃO</small></div></div>
-          <div>
-            <div className="fold-kicker light">Uma nova perspectiva</div>
-            <h2>O problema nunca foi sua memória.</h2>
-            <p>Você consegue lembrar músicas que ouviu anos atrás.</p>
-            <p>Mas provavelmente não consegue lembrar o conteúdo do último PDF que estudou.</p>
-            <p>Então o problema não é sua memória.</p>
-            <strong>É a forma como você revisa.</strong>
-          </div>
         </div>
       </section>
 
@@ -99,6 +89,32 @@ export default function Home() {
           <strong className="difficult">Percebe a diferença?</strong>
           <p>Seu cérebro tende a recuperar com muito mais facilidade informações que foram reforçadas repetidamente por meio de padrões sonoros.</p>
           <p>Foi exatamente dessa ideia que nasceu o <strong>Método da Memória Musical.</strong></p>
+        </div>
+      </section>
+
+      <section className="fold memory-fold">
+        <div className="container split">
+          <div className="brain-visual compact-brain"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="brain-core"><span>♪</span><small>MEMÓRIA</small><b>+</b><small>REPETIÇÃO</small></div></div>
+          <div>
+            <div className="fold-kicker light">Por que isso acontece</div>
+            <h2>O problema nunca foi sua memória.</h2>
+            <p>Você consegue lembrar músicas que ouviu anos atrás.</p>
+            <p>Mas provavelmente não consegue lembrar o conteúdo do último PDF que estudou.</p>
+            <p>Então o problema não é sua memória.</p>
+            <strong>É a forma como você revisa.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section className="fold origin-fold">
+        <div className="container narrow">
+          <div className="fold-kicker">Como tudo começou</div>
+          <h2>Uma pergunta simples deu origem ao método.</h2>
+          <div className="origin-story">
+            <p>Se músicas permanecem na memória por tantos anos, por que os conteúdos estudados desaparecem em poucos dias?</p>
+            <p>A resposta não estava em estudar ainda mais. Estava em criar uma forma mais prática de reencontrar a matéria várias vezes durante a rotina.</p>
+            <strong>Foi dessa busca que nasceu o Método da Memória Musical: transformar a revisão em algo que pode acompanhar o concurseiro ao longo do dia.</strong>
+          </div>
         </div>
       </section>
 
@@ -128,7 +144,7 @@ export default function Home() {
           <div className="fold-kicker light">Passo a passo</div>
           <h2>Como funciona</h2>
           <div className="steps-flow">
-            {["Escolha a disciplina.", "Ouça.", "Reforce naturalmente.", "Revise várias vezes durante a semana.", "Chegue mais preparado para a prova."].map((step,i)=><div key={step}><span>0{i+1}</span><strong>{step}</strong>{i<4&&<i aria-hidden="true">↓</i>}</div>)}
+            {["Escolha a disciplina.", "Dê o play.", "Ouça durante sua rotina.", "Revise naturalmente.", "Chegue mais preparado para a prova."].map((step,i)=><div key={step}><span>{["①","②","③","④","⑤"][i]}</span><strong>{step}</strong>{i<4&&<i aria-hidden="true">↓</i>}</div>)}
           </div>
         </div>
       </section>
@@ -161,6 +177,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="fold comparison-fold">
+        <div className="container">
+          <div className="fold-kicker">Compare as duas experiências</div>
+          <h2>Qual forma de revisar cabe melhor na sua rotina?</h2>
+          <div className="comparison-grid">
+            <div className="comparison-card traditional"><span>ESTUDO TRADICIONAL</span><h3>Mais esforço para revisar</h3><ul><li>PDFs enormes</li><li>Revisões cansativas</li><li>Difícil revisar diariamente</li><li>Muito tempo lendo</li></ul></div>
+            <div className="comparison-versus">ou</div>
+            <div className="comparison-card musical"><span>MEMÓRIA MUSICAL</span><h3>Mais frequência na rotina</h3><ul><li>Revisões rápidas</li><li>Ouça em qualquer lugar</li><li>Mais frequência</li><li>Fácil de encaixar na rotina</li></ul></div>
+          </div>
+        </div>
+      </section>
+
       <section className="fold students-fold">
         <div className="container">
           <div className="fold-kicker light">Prova social</div>
@@ -173,14 +201,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="fold access-fold" id="acesso">
-        <div className="container access-grid">
+      <section className="fold guarantee-fold">
+        <div className="container guarantee-box">
+          <div className="guarantee-seal"><strong>7</strong><span>DIAS</span></div>
           <div>
-            <div className="fold-kicker light">Acesso completo</div>
-            <h2>Você recebe acesso completo</h2>
-            <CheckList items={["Método da Memória Musical", "Todas as músicas", "Plataforma", "Atualizações", "Novas disciplinas", "Suporte", "Acesso imediato"]}/>
+            <div className="fold-kicker">Risco reduzido</div>
+            <h2>Ainda está em dúvida?</h2>
+            <p>Experimente durante 7 dias.</p>
+            <p>Se perceber que o Método da Memória Musical não faz sentido para sua rotina, basta solicitar o reembolso.</p>
+            <strong>Sem perguntas.</strong>
           </div>
-          <div className="offer-card"><span className="offer-label">COMECE SUA REVISÃO</span><div className="offer-logo"><span className="brand-mark"><i/><i/><i/><i/></span><strong>Memória Musical</strong></div><p>Transforme momentos livres em oportunidades de reforçar os assuntos mais importantes.</p><Button>Quero acessar agora</Button><small>Ambiente seguro • Acesso pelo celular</small></div>
+        </div>
+      </section>
+
+      <section className="fold access-fold" id="acesso">
+        <div className="container opportunity">
+          <div className="fold-kicker light">Uma oportunidade de revisar diferente</div>
+          <h2>Hoje você recebe acesso completo a:</h2>
+          <div className="opportunity-grid">
+            <CheckList items={["Método da Memória Musical", "Biblioteca completa", "Atualizações", "Plataforma online", "Acesso pelo celular", "Acesso pelo computador", "Novas músicas", "Suporte"]}/>
+            <div className="price-panel">
+              <span>De:</span><del>R$ XXX</del>
+              <small>Por apenas:</small><strong>R$ XX</strong>
+              <p>Preencha os valores reais antes da publicação definitiva.</p>
+              <Button>Quero acessar agora</Button>
+              <em>Acesso imediato após a confirmação</em>
+            </div>
+          </div>
         </div>
       </section>
 
