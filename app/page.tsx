@@ -53,29 +53,22 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span />Para concursos de enfermagem</div>
-            <h1>Descubra como concurseiros da Enfermagem estão memorizando os assuntos mais cobrados usando o <em>Método da Memória Musical</em> — mesmo tendo apenas 1 hora por dia para estudar.</h1>
+            <h1>Memorize os assuntos mais cobrados nos concursos de enfermagem com apenas <em>20 minutos por dia</em></h1>
             <p className="hero-lead">Uma nova forma de reforçar o que você estuda, mesmo com plantões, filhos e uma rotina apertada.</p>
             <Button>Quero memorizar melhor agora</Button>
             <p className="microcopy"><span>✓</span> Acesso pelo celular <span>✓</span> Liberação imediata</p>
           </div>
-          <div className="audio-card">
-            <div className="audio-top"><span className="live-dot" />Tocando agora <small>03:18</small></div>
-            <div className="cover-art">
-              <span className="cross">+</span>
-              <div><small>FAIXA 01</small><strong>Princípios<br />do SUS</strong></div>
-            </div>
-            <Waveform />
-            <div className="player">
-              <span>01:24</span><button aria-label="Reproduzir amostra">▶</button><span>03:18</span>
-            </div>
-            <p>Conteúdo que acompanha o seu ritmo.</p>
+          <div className="hero-product">
+            <div className="product-glow" />
+            <img src="/memoria-musical-app.webp" alt="Aplicativo Memória Musical mostrando uma trilha sobre o Sistema Único de Saúde" />
+            <div className="product-caption"><span className="live-dot" /><strong>Trilhas organizadas por assunto</strong><small>Revise pelo celular onde estiver</small></div>
           </div>
         </div>
       </section>
 
       <section className="proof-strip">
         <div className="container strip-grid">
-          <div><strong>1 hora</strong><span>pode render muito mais</span></div>
+          <div><strong>20 minutos</strong><span>de revisão por dia</span></div>
           <div><strong>10+ temas</strong><span>essenciais da enfermagem</span></div>
           <div><strong>Onde estiver</strong><span>revisão prática pelo celular</span></div>
         </div>

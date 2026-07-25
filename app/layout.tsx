@@ -5,6 +5,7 @@ import "./globals.css";
 import "./headlines.css";
 import "./conversion-updates.css";
 import "./headline-size.css";
+import "./hero-product.css";
 
 const manrope = Manrope({ variable: "--font-sans", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], style: ["normal", "italic"] });
