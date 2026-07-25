@@ -53,8 +53,8 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span />Para concursos de enfermagem</div>
-            <h1>Memorize os assuntos mais cobrados com apenas <em>1 hora por dia.</em></h1>
-            <p className="hero-lead">Descubra como concurseiros da enfermagem estão transformando conteúdos importantes em músicas fáceis de revisar — mesmo com plantões, filhos e uma rotina apertada.</p>
+            <h1>Descubra como concurseiros da Enfermagem estão memorizando os assuntos mais cobrados usando o <em>Método da Memória Musical®</em> — mesmo tendo apenas 1 hora por dia para estudar.</h1>
+            <p className="hero-lead">Uma nova forma de reforçar o que você estuda, mesmo com plantões, filhos e uma rotina apertada.</p>
             <Button>Quero memorizar melhor agora</Button>
             <p className="microcopy"><span>✓</span> Acesso pelo celular <span>✓</span> Liberação imediata</p>
           </div>
@@ -81,25 +81,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section identification">
+        <div className="container narrow">
+          <div className="section-tag">Isso parece familiar?</div>
+          <h2>Você já passou por isso?</h2>
+          <div className="pain-list">
+            {[
+              "Estuda durante horas e esquece tudo poucos dias depois.",
+              "Faz dezenas de questões e continua errando os mesmos assuntos.",
+              "Lê PDFs enormes e sente que nada fixa.",
+              "Trabalha em plantões e nunca consegue revisar como gostaria.",
+              "Tem medo de “dar branco” justamente na hora da prova.",
+            ].map((item, i) => <div key={item}><span>0{i + 1}</span><p>{item}</p></div>)}
+          </div>
+        </div>
+      </section>
+
       <section className="section problem">
         <div className="container narrow">
           <div className="section-tag">O problema real</div>
-          <h2>Você não precisa estudar mais.<br /><em>Precisa lembrar melhor.</em></h2>
-          <p className="section-intro">Existe uma enorme diferença entre passar horas estudando e conseguir recuperar a informação exatamente quando ela é necessária.</p>
-          <div className="contrast">
-            <div className="contrast-card old">
-              <span className="number">01</span><h3>O ciclo que cansa</h3>
-              <ul>
-                <li>Ler PDFs intermináveis</li><li>Assistir a videoaulas longas</li><li>Fazer resumos gigantes</li><li>Esquecer tudo poucos dias depois</li>
-              </ul>
-            </div>
-            <div className="contrast-arrow" aria-hidden="true">→</div>
-            <div className="contrast-card new">
-              <span className="number">02</span><h3>Uma revisão que acompanha você</h3>
-              <ul>
-                <li>Ouvir conteúdos em qualquer lugar</li><li>Revisar várias vezes sem sobrecarga</li><li>Associar informações a ritmo e repetição</li><li>Reconhecer o assunto com mais facilidade</li>
-              </ul>
-            </div>
+          <h2>O maior erro dos concurseiros da enfermagem</h2>
+          <p className="section-intro">Durante anos ensinaram você a estudar assim:</p>
+          <div className="wrong-methods">
+            {["PDFs enormes", "Videoaulas de três horas", "Resumos intermináveis", "Ler tudo várias vezes"].map((item) => <div key={item}><span>✓</span><strong>{item}</strong></div>)}
+          </div>
+          <div className="problem-answer">
+            <span>O problema?</span>
+            <p>Esses métodos exigem um enorme esforço para memorizar.</p>
+            <p>E é justamente por isso que tanta gente esquece o conteúdo poucos dias depois.</p>
           </div>
         </div>
       </section>
@@ -113,11 +122,35 @@ export default function Home() {
           </div>
           <div>
             <div className="section-tag light">Por que faz sentido</div>
-            <h2>O problema nunca foi a sua memória.</h2>
-            <p>Você se lembra de músicas que ouviu há 10 ou 20 anos, mas talvez não consiga recordar o conteúdo de um PDF estudado na semana passada.</p>
-            <p>Ritmo, padrões e repetição criam mais pontos de contato com a informação. O Método da Memória Musical® usa esse princípio para tornar a revisão mais frequente e memorável.</p>
-            <div className="notice"><strong>Importante:</strong> o método não substitui seus estudos. Ele potencializa a sua revisão.</div>
+            <h2>O problema nunca foi sua memória.</h2>
+            <p>Se você consegue lembrar músicas da infância...</p>
+            <p>Mas esquece rapidamente aquilo que estudou na semana passada...</p>
+            <p>O problema não é falta de inteligência.</p>
+            <p>É que seu cérebro aprende de maneira diferente.</p>
           </div>
+        </div>
+        <div className="container memory-test">
+          <div className="test-label">Faça um teste</div>
+          <p>Complete mentalmente.</p>
+          <blockquote>“Parabéns pra...”</blockquote>
+          <p>Você completou <strong>“você”.</strong></p>
+          <div className="test-divider" />
+          <p>Agora tente lembrar o quarto tópico do último PDF que estudou.</p>
+          <strong className="difficult">Difícil?</strong>
+          <p>Isso acontece porque seu cérebro guarda padrões sonoros com muito mais facilidade do que grandes blocos de texto.</p>
+          <p>Foi justamente dessa percepção que nasceu o <strong>Método da Memória Musical®.</strong></p>
+        </div>
+      </section>
+
+      <section className="section method-intro">
+        <div className="container narrow">
+          <div className="section-tag">Agora você conhece a diferença</div>
+          <h2>Conheça o Método da Memória Musical®</h2>
+          <p className="method-lead">Um sistema de revisão desenvolvido para ajudar concurseiros da enfermagem a reforçar os conteúdos mais cobrados por meio de músicas criadas para facilitar a memorização.</p>
+          <div className="method-uses">
+            {["Enquanto dirige", "Enquanto trabalha", "Enquanto faz exercícios", "Enquanto cozinha", "Em qualquer momento livre do seu dia"].map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}
+          </div>
+          <div className="notice dark-notice"><strong>Importante:</strong> o método não substitui seus estudos. Ele potencializa a sua revisão.</div>
         </div>
       </section>
 
@@ -136,9 +169,12 @@ export default function Home() {
         <div className="container split exam-grid">
           <div>
             <div className="section-tag light">Na hora da prova</div>
-            <h2>A questão aparece.<br />A lembrança vem junto.</h2>
-            <p>Imagine ler uma questão sobre SUS e lembrar de um trecho da música. Em seguida, encontrar Ética em Enfermagem e reconhecer a sequência do conteúdo.</p>
-            <ul className="clean-list"><li>Mais contatos com os assuntos</li><li>Revisões menos cansativas</li><li>Recuperação mais natural da informação</li></ul>
+            <h2>Imagine entrar na prova...</h2>
+            <p>Você lê uma questão sobre SUS.</p>
+            <p>Instantaneamente lembra da música.</p>
+            <p>Depois aparece uma questão sobre vacinação. Mais uma música.</p>
+            <p>Outra questão sobre urgência e emergência. Novamente você lembra da sequência.</p>
+            <div className="notice"><strong>É isso que acontece quando o conteúdo deixa de ser apenas um texto...</strong><br />E passa a fazer parte da sua memória.</div>
           </div>
           <div className="question-card">
             <div className="question-head"><span>SIMULADO</span><small>Questão 14 de 30</small></div>
@@ -155,7 +191,7 @@ export default function Home() {
         <div className="container">
           <div className="library-head">
             <div><div className="section-tag">Dentro da plataforma</div><h2>Um acervo organizado pelos temas que mais importam.</h2></div>
-            <p>Encontre rapidamente a matéria que deseja reforçar e crie uma rotina de revisão que funciona para você.</p>
+            <p>Você terá acesso ao Método da Memória Musical®, organizado em trilhas de revisão contendo os assuntos mais cobrados em concursos da enfermagem.</p>
           </div>
           <div className="subject-grid">
             {subjects.map((s, i)=><div className="subject" key={s}><span>{String(i+1).padStart(2,"0")}</span><strong>{s}</strong><i>♪</i></div>)}
@@ -174,6 +210,20 @@ export default function Home() {
           <div className="audience-list">
             {["Trabalha em plantões e tem pouco tempo","Estuda há meses, mas continua esquecendo","Está cansado de depender apenas de PDFs","Quer revisar no ônibus, na academia ou em casa","Busca uma preparação mais leve e constante"].map((x,i)=><div key={x}><span>0{i+1}</span><p>{x}</p></div>)}
           </div>
+        </div>
+      </section>
+
+      <section className="section social-proof">
+        <div className="container">
+          <div className="section-tag">Experiências reais</div>
+          <h2>Quem está utilizando o Método da Memória Musical®</h2>
+          <p className="section-intro">Resultados e experiências reais serão apresentados aqui com autorização dos alunos.</p>
+          <div className="proof-grid">
+            <div className="proof-placeholder"><span>01</span><strong>Depoimento em vídeo</strong><p>Espaço reservado para um vídeo real de aluno.</p></div>
+            <div className="proof-placeholder"><span>02</span><strong>Relato de experiência</strong><p>Espaço reservado para um print ou depoimento verificável.</p></div>
+            <div className="proof-placeholder"><span>03</span><strong>Aprovação ou resultado</strong><p>Espaço reservado para uma conquista documentada.</p></div>
+          </div>
+          <p className="proof-note">Nenhum depoimento fictício foi utilizado nesta página.</p>
         </div>
       </section>
 
@@ -207,7 +257,13 @@ export default function Home() {
         <div className="container">
           <span className="music-mark">♪</span>
           <h2>Quantas questões você pode estar perdendo por não lembrar do que já estudou?</h2>
-          <p>Chega de transformar a revisão em uma tarefa cansativa. Faça o conteúdo acompanhar o seu dia.</p>
+          <div className="decision-copy">
+            <p>Você pode continuar estudando exatamente como sempre estudou...</p>
+            <p>Lendo centenas de páginas. Esquecendo boa parte do conteúdo. E torcendo para lembrar na hora da prova.</p>
+            <span>Ou</span>
+            <p>Pode começar a revisar de uma forma que acompanha sua rotina e aumenta a frequência de contato com os assuntos mais importantes.</p>
+            <strong>A decisão é sua.</strong>
+          </div>
           <Button>Quero começar a memorizar melhor</Button>
         </div>
       </section>
