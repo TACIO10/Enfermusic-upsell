@@ -12,6 +12,7 @@ import "./fernanda-story.css";
 import "./story-images.css";
 import "./related-icons.css";
 import "./audio-samples.css";
+import "./testimonials-real.css";
 
 const manrope = Manrope({ variable: "--font-sans", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], style: ["normal", "italic"] });

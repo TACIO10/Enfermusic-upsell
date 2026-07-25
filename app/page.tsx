@@ -266,13 +266,22 @@ export default function Home() {
 
       <section className="fold students-fold">
         <div className="container">
-          <div className="fold-kicker light">Prova social</div>
           <h2>O que dizem os alunos</h2>
-          <p className="fold-lead">Uma área ampla para reunir vídeos, prints, conversas e áudios reais de alunos.</p>
-          <div className="student-media-grid">
-            {Array.from({length:10},(_,i)=><ProofPlaceholder key={i} type={i<5?"Vídeo":i<7?"Print":i<9?"WhatsApp":"Áudio"} index={i+1}/>)}
+          <p className="fold-lead">Relatos de alunas que incluíram as músicas na rotina de estudos.</p>
+          <div className="testimonial-gallery">
+            <figure>
+              <img src="/depoimento-juliana.webp" alt="Depoimento de Juliana Rocha sobre o Método da Memória Musical" />
+              <figcaption>Juliana Rocha</figcaption>
+            </figure>
+            <figure>
+              <img src="/depoimento-camila.webp" alt="Depoimento de Camila Santos sobre o Método da Memória Musical" />
+              <figcaption>Camila Santos</figcaption>
+            </figure>
+            <figure>
+              <img src="/depoimento-amanda.webp" alt="Depoimento de Amanda Ferreira sobre o Método da Memória Musical" />
+              <figcaption>Amanda Ferreira</figcaption>
+            </figure>
           </div>
-          <p className="honesty-note">Os espaços acima devem ser substituídos apenas por provas reais e autorizadas.</p>
         </div>
       </section>
 
