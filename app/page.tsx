@@ -61,7 +61,7 @@ export default function Home() {
 
           <div className="story-timeline">
             <article className="story-stage">
-              <div className="story-media study-media"><span>FOTO 01</span><strong>Mesa de estudos da Fernanda</strong><small>Insira uma foto real autorizada</small></div>
+              <div className="story-media study-media"><img src="/fernanda-antes.webp" alt="Mesa de estudos da Fernanda com computador, materiais e estetoscópio" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 1 — ANTES</span><time>Janeiro de 2025</time></div>
                 <blockquote>“Eu estudava todos os dias... mas parecia que nunca era suficiente.”</blockquote>
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="timeline-connector"><span>↓</span></div>
 
             <article className="story-stage reverse">
-              <div className="story-media turning-media"><img src="/memoria-musical-app.webp" alt="Aplicativo Memória Musical reproduzindo uma trilha de revisão" /></div>
+              <div className="story-media turning-media"><img src="/fernanda-virada.webp" alt="Fones de ouvido sobre materiais de estudo, representando a mudança na forma de revisar" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 2 — A VIRADA</span><time>Abril de 2025</time></div>
                 <h3>Fernanda decidiu mudar a forma de revisar.</h3>
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="timeline-connector"><span>↓</span></div>
 
             <article className="story-stage">
-              <div className="story-media approved-media"><span>FOTO 03</span><strong>Fernanda aprovada</strong><small>Insira a foto real de jaleco ou roupa hospitalar</small></div>
+              <div className="story-media approved-media"><img src="/fernanda-depois.webp" alt="Fernanda sorrindo com roupa hospitalar após a aprovação" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 3 — DEPOIS</span><time>Novembro de 2025</time></div>
                 <blockquote>“Na prova, a sensação foi completamente diferente.”</blockquote>
@@ -104,7 +104,7 @@ export default function Home() {
             <strong>Você precisa encontrar uma forma de revisar melhor.</strong>
             <span>Foi exatamente para isso que criamos o Método da Memória Musical.</span>
           </div>
-          <p className="story-proof-note">Antes de divulgar esta história como prova real, substitua os espaços pelas fotos autorizadas e confirme datas, falas e resultado.</p>
+          <p className="story-proof-note">História e imagens publicadas com base nos materiais fornecidos. Confirme datas, falas e resultado antes da divulgação definitiva.</p>
         </div>
       </section>
 
