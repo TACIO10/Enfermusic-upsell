@@ -304,7 +304,7 @@ export default function Home() {
                 <h3>Checklist dos Assuntos Mais Cobrados</h3>
                 <p>Saiba exatamente quais conteúdos priorizar na sua preparação para os concursos de Enfermagem.</p>
                 <p>Você receberá um checklist organizado pelos temas com maior incidência nas provas, permitindo acompanhar sua evolução e revisar o que realmente importa.</p>
-                <del>De R$ 97,00</del>
+                <del>De R$ 67,00</del>
                 <strong>GRÁTIS</strong>
               </article>
               <article>
@@ -313,7 +313,7 @@ export default function Home() {
                 <h3>Banco de Questões Comentadas por Tema</h3>
                 <p>Coloque seu conhecimento em prática logo após cada revisão.</p>
                 <p>Questões organizadas por disciplina, com comentários para ajudar a compreender os principais pontos cobrados pelas bancas.</p>
-                <del>De R$ 67,00</del>
+                <del>De R$ 97,00</del>
                 <strong>GRÁTIS</strong>
               </article>
               <article>
@@ -332,6 +332,44 @@ export default function Home() {
               </article>
             </div>
           </div>
+          <section className="value-stack">
+            <div className="value-stack-intro">
+              <span>Resumo da sua condição</span>
+              <h3>Tudo o que você recebe hoje</h3>
+            </div>
+            <div className="value-items">
+              <article>
+                <div><strong>Método da Memória Musical®</strong><p>Aprenda a memorizar os assuntos mais cobrados através de músicas criadas especialmente para concursos de enfermagem.</p></div>
+                <b>R$ 127,00</b>
+              </article>
+              <article>
+                <div><strong>Bônus 1 — Checklist dos Assuntos Mais Cobrados</strong><p>Saiba exatamente quais conteúdos priorizar para estudar de forma mais estratégica.</p></div>
+                <b>R$ 67,00</b>
+              </article>
+              <article>
+                <div><strong>Bônus 2 — Banco de Questões Comentadas por Tema</strong><p>Treine com questões organizadas por assunto e fortaleça sua memorização.</p></div>
+                <b>R$ 97,00</b>
+              </article>
+              <article>
+                <div><strong>Bônus 3 — Comunidade Exclusiva de Alunos</strong><p>Tire dúvidas, compartilhe sua evolução e receba atualizações exclusivas.</p></div>
+                <b>R$ 37,00</b>
+              </article>
+            </div>
+            <div className="package-total">
+              <span>Valor total do pacote</span>
+              <strong>R$ 328,00</strong>
+            </div>
+            <div className="special-condition">
+              <p>Você poderia pagar <strong>R$ 328,00</strong> por todo esse material.</p>
+              <p>Afinal, cada recurso foi desenvolvido para acelerar sua preparação e aumentar suas chances de aprovação.</p>
+              <div>
+                <span>Mas hoje você não vai pagar R$ 328,00.</span>
+                <span>Nem R$ 197,00.</span>
+                <span>Nem R$ 127,00.</span>
+              </div>
+              <p>Você terá acesso ao <strong>Método da Memória Musical®</strong>, juntamente com <strong>todos os bônus</strong>, por uma condição especial disponível apenas nesta página.</p>
+            </div>
+          </section>
           <div className="opportunity-grid">
             <CheckList items={["Método da Memória Musical", "Biblioteca completa", "Atualizações", "Plataforma online", "Acesso pelo celular", "Acesso pelo computador", "Novas músicas", "Suporte"]}/>
             <div className="price-panel">
