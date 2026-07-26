@@ -299,7 +299,7 @@ export default function Home() {
             </div>
             <div className="bonus-grid">
               <article>
-                <div className="bonus-icon"><ListChecks aria-hidden="true" /></div>
+                <div className="bonus-product"><img src="/bonus-checklist.png" alt="Capa do Checklist dos Assuntos Mais Cobrados" /></div>
                 <span>BÔNUS #1</span>
                 <h3>Checklist dos Assuntos Mais Cobrados</h3>
                 <p>Saiba exatamente quais conteúdos priorizar na sua preparação para os concursos de Enfermagem.</p>
@@ -308,7 +308,7 @@ export default function Home() {
                 <strong>GRÁTIS</strong>
               </article>
               <article>
-                <div className="bonus-icon"><BadgeHelp aria-hidden="true" /></div>
+                <div className="bonus-product"><img src="/bonus-questoes.png" alt="Capa do Banco de Questões Comentadas por Tema" /></div>
                 <span>BÔNUS #2</span>
                 <h3>Banco de Questões Comentadas por Tema</h3>
                 <p>Coloque seu conhecimento em prática logo após cada revisão.</p>
@@ -317,7 +317,7 @@ export default function Home() {
                 <strong>GRÁTIS</strong>
               </article>
               <article>
-                <div className="bonus-icon"><MessagesSquare aria-hidden="true" /></div>
+                <div className="bonus-product"><img src="/bonus-comunidade.png" alt="Capa da Comunidade Exclusiva de Alunos" /></div>
                 <span>BÔNUS #3</span>
                 <h3>Comunidade Exclusiva de Alunos</h3>
                 <p>Tenha acesso a uma comunidade exclusiva para trocar experiências, tirar dúvidas, acompanhar novidades e manter a motivação durante toda a preparação.</p>
@@ -363,4 +363,4 @@ export default function Home() {
     </main>
   );
 }
-import { BadgeHelp, CarFront, Clock3, Dumbbell, Footprints, Gift, Headphones, Hospital, House, ListChecks, MessagesSquare, Music2, PlayCircle, Users } from "lucide-react";
+import { CarFront, Clock3, Dumbbell, Footprints, Gift, Headphones, Hospital, House, Music2, PlayCircle, Users } from "lucide-react";
