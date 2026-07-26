@@ -35,14 +35,13 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio">
-        <div className="hero-image" role="img" aria-label="Profissional de enfermagem revisando pelo celular" />
         <div className="hero-shade" />
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span/>Para concursos de enfermagem</div>
             <h1>Memorize os assuntos mais cobrados nos concursos de enfermagem com apenas <em>20 minutos por dia</em></h1>
             <div className="hero-offer-showcase">
-              <img src="/oferta-memoria-musical.webp" alt="Método da Memória Musical com aplicativo, comunidade, banco de questões e checklist" />
+              <img src="/oferta-memoria-musical.webp" width="1536" height="1024" fetchPriority="high" decoding="async" alt="Método da Memória Musical com aplicativo, comunidade, banco de questões e checklist" />
             </div>
             <p className="hero-lead">Reforce os conteúdos mais importantes mesmo com plantões, filhos e uma rotina apertada.</p>
             <Button>Quero memorizar melhor agora</Button>
@@ -59,7 +58,7 @@ export default function Home() {
 
           <div className="story-timeline">
             <article className="story-stage">
-              <div className="story-media study-media"><img src="/fernanda-antes.webp" alt="Mesa de estudos da Fernanda com computador, materiais e estetoscópio" /></div>
+              <div className="story-media study-media"><img src="/fernanda-antes.webp" width="650" height="871" loading="lazy" decoding="async" alt="Mesa de estudos da Fernanda com computador, materiais e estetoscópio" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 1 — ANTES</span><time>Janeiro de 2025</time></div>
                 <blockquote>“Eu estudava todos os dias... mas parecia que nunca era suficiente.”</blockquote>
@@ -72,7 +71,7 @@ export default function Home() {
             <div className="timeline-connector"><span>↓</span></div>
 
             <article className="story-stage reverse">
-              <div className="story-media turning-media"><img src="/fernanda-virada.webp" alt="Fones de ouvido sobre materiais de estudo, representando a mudança na forma de revisar" /></div>
+              <div className="story-media turning-media"><img src="/fernanda-virada.webp" width="1000" height="400" loading="lazy" decoding="async" alt="Fones de ouvido sobre materiais de estudo, representando a mudança na forma de revisar" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 2 — A VIRADA</span><time>Abril de 2025</time></div>
                 <h3>Fernanda decidiu mudar a forma de revisar.</h3>
@@ -86,7 +85,7 @@ export default function Home() {
             <div className="timeline-connector"><span>↓</span></div>
 
             <article className="story-stage">
-              <div className="story-media approved-media"><img src="/fernanda-depois.webp" alt="Fernanda sorrindo com roupa hospitalar após a aprovação" /></div>
+              <div className="story-media approved-media"><img src="/fernanda-depois.webp" width="1175" height="1338" loading="lazy" decoding="async" alt="Fernanda sorrindo com roupa hospitalar após a aprovação" /></div>
               <div className="story-copy">
                 <div className="stage-head"><span>ETAPA 3 — DEPOIS</span><time>Novembro de 2025</time></div>
                 <blockquote>“Na prova, a sensação foi completamente diferente.”</blockquote>
@@ -268,15 +267,15 @@ export default function Home() {
           <p className="fold-lead">Relatos de alunas que incluíram as músicas na rotina de estudos.</p>
           <div className="testimonial-gallery">
             <figure>
-              <img src="/depoimento-juliana.webp" alt="Depoimento de Juliana Rocha sobre o Método da Memória Musical" />
+              <img src="/depoimento-juliana.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Juliana Rocha sobre o Método da Memória Musical" />
               <figcaption>Juliana Rocha</figcaption>
             </figure>
             <figure>
-              <img src="/depoimento-camila.webp" alt="Depoimento de Camila Santos sobre o Método da Memória Musical" />
+              <img src="/depoimento-camila.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Camila Santos sobre o Método da Memória Musical" />
               <figcaption>Camila Santos</figcaption>
             </figure>
             <figure>
-              <img src="/depoimento-amanda.webp" alt="Depoimento de Amanda Ferreira sobre o Método da Memória Musical" />
+              <img src="/depoimento-amanda.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Amanda Ferreira sobre o Método da Memória Musical" />
               <figcaption>Amanda Ferreira</figcaption>
             </figure>
           </div>
@@ -297,7 +296,7 @@ export default function Home() {
             </div>
             <div className="bonus-grid">
               <article>
-                <div className="bonus-product"><img src="/bonus-checklist.png" alt="Capa do Checklist dos Assuntos Mais Cobrados" /></div>
+                <div className="bonus-product"><img src="/bonus-checklist.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Capa do Checklist dos Assuntos Mais Cobrados" /></div>
                 <span>BÔNUS #1</span>
                 <h3>Checklist dos Assuntos Mais Cobrados</h3>
                 <p>Saiba exatamente quais conteúdos priorizar na sua preparação para os concursos de Enfermagem.</p>
@@ -306,7 +305,7 @@ export default function Home() {
                 <strong>GRÁTIS</strong>
               </article>
               <article>
-                <div className="bonus-product"><img src="/bonus-questoes.png" alt="Capa do Banco de Questões Comentadas por Tema" /></div>
+                <div className="bonus-product"><img src="/bonus-questoes.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Capa do Banco de Questões Comentadas por Tema" /></div>
                 <span>BÔNUS #2</span>
                 <h3>Banco de Questões Comentadas por Tema</h3>
                 <p>Coloque seu conhecimento em prática logo após cada revisão.</p>
@@ -315,7 +314,7 @@ export default function Home() {
                 <strong>GRÁTIS</strong>
               </article>
               <article>
-                <div className="bonus-product"><img src="/bonus-comunidade.png" alt="Capa da Comunidade Exclusiva de Alunos" /></div>
+                <div className="bonus-product"><img src="/bonus-comunidade.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Capa da Comunidade Exclusiva de Alunos" /></div>
                 <span>BÔNUS #3</span>
                 <h3>Comunidade Exclusiva de Alunos</h3>
                 <p>Tenha acesso a uma comunidade exclusiva para trocar experiências, tirar dúvidas, acompanhar novidades e manter a motivação durante toda a preparação.</p>
