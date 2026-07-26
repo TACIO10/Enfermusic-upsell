@@ -370,14 +370,37 @@ export default function Home() {
               <p>Você terá acesso ao <strong>Método da Memória Musical®</strong>, juntamente com <strong>todos os bônus</strong>, por uma condição especial disponível apenas nesta página.</p>
             </div>
           </section>
-          <div className="opportunity-grid">
-            <div className="price-panel">
-              <span>Condição especial desta página</span>
-              <small>Por apenas:</small><strong>R$ 29,90</strong>
-              <p>Pagamento único</p>
-              <Button>Quero acessar agora</Button>
-              <em>Acesso imediato após a confirmação</em>
-            </div>
+          <div className="pricing-options">
+            <article className="pricing-card essential">
+              <div className="plan-label">Plano Essencial</div>
+              <h3>Para começar a revisar com música</h3>
+              <div className="plan-price"><small>Pagamento único</small><strong>R$ 19,90</strong></div>
+              <ul>
+                <li>Método da Memória Musical</li>
+                <li>Trilhas com os assuntos essenciais</li>
+                <li>Acesso pelo celular e computador</li>
+                <li>Acesso imediato</li>
+              </ul>
+              <Button>Quero o Plano Essencial</Button>
+              <em>Conteúdo essencial para iniciar</em>
+            </article>
+            <article className="pricing-card complete">
+              <div className="best-choice">Melhor escolha</div>
+              <div className="plan-label">Plano Completo</div>
+              <h3>Todo o método e todos os bônus</h3>
+              <div className="plan-price"><small>Pagamento único</small><strong>R$ 29,90</strong></div>
+              <ul>
+                <li>Método da Memória Musical</li>
+                <li>Biblioteca completa de músicas</li>
+                <li>Checklist dos assuntos mais cobrados</li>
+                <li>Banco de questões comentadas</li>
+                <li>Comunidade exclusiva de alunos</li>
+                <li>Novas músicas e atualizações</li>
+                <li>Suporte</li>
+              </ul>
+              <Button>Quero acesso completo</Button>
+              <em>Acesso imediato a tudo</em>
+            </article>
           </div>
         </div>
       </section>
