@@ -371,11 +371,10 @@ export default function Home() {
             </div>
           </section>
           <div className="opportunity-grid">
-            <CheckList items={["Método da Memória Musical", "Biblioteca completa", "Atualizações", "Plataforma online", "Acesso pelo celular", "Acesso pelo computador", "Novas músicas", "Suporte"]}/>
             <div className="price-panel">
-              <span>De:</span><del>R$ XXX</del>
-              <small>Por apenas:</small><strong>R$ XX</strong>
-              <p>Preencha os valores reais antes da publicação definitiva.</p>
+              <span>Condição especial desta página</span>
+              <small>Por apenas:</small><strong>R$ 29,90</strong>
+              <p>Pagamento único</p>
               <Button>Quero acessar agora</Button>
               <em>Acesso imediato após a confirmação</em>
             </div>
