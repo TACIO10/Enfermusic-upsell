@@ -41,14 +41,12 @@ export default function Home() {
           <div className="hero-copy">
             <div className="eyebrow"><span/>Para concursos de enfermagem</div>
             <h1>Memorize os assuntos mais cobrados nos concursos de enfermagem com apenas <em>20 minutos por dia</em></h1>
+            <div className="hero-offer-showcase">
+              <img src="/oferta-memoria-musical.webp" alt="Método da Memória Musical com aplicativo, comunidade, banco de questões e checklist" />
+            </div>
             <p className="hero-lead">Reforce os conteúdos mais importantes mesmo com plantões, filhos e uma rotina apertada.</p>
             <Button>Quero memorizar melhor agora</Button>
             <p className="microcopy"><span>✓</span>Acesso pelo celular <span>✓</span>Liberação imediata</p>
-          </div>
-          <div className="hero-product">
-            <div className="product-glow" />
-            <img src="/memoria-musical-app.webp" alt="Aplicativo Memória Musical com uma trilha sobre o Sistema Único de Saúde" />
-            <div className="product-caption"><span className="live-dot"/><strong>Trilhas organizadas por assunto</strong><small>Revise pelo celular onde estiver</small></div>
           </div>
         </div>
       </section>
