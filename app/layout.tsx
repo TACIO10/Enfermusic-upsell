@@ -46,5 +46,13 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body className={`${manrope.variable} ${playfair.variable}`}>{children}</body></html>;
+  return (
+    <html lang="pt-BR">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: 'window.pixelId="6a668772849ca51086a296f7";' }} />
+        <script src="https://cdn.utmify.com.br/scripts/pixel/pixel.js" async defer />
+      </head>
+      <body className={`${manrope.variable} ${playfair.variable}`}>{children}</body>
+    </html>
+  );
 }
