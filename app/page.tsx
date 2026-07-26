@@ -14,8 +14,8 @@ const faqs = [
   ["Terei acesso imediatamente?", "Sim. Após a confirmação do pagamento, o acesso é liberado."],
 ];
 
-function Button({ children }: { children: React.ReactNode }) {
-  return <a className="cta" href={checkoutUrl}>{children}<span aria-hidden="true">→</span></a>;
+function Button({ children, href = checkoutUrl }: { children: React.ReactNode; href?: string }) {
+  return <a className="cta" href={href}>{children}<span aria-hidden="true">→</span></a>;
 }
 
 function CheckList({ items }: { items: string[] }) {
@@ -379,7 +379,7 @@ export default function Home() {
                 <li>Acesso pelo celular e computador</li>
                 <li>Acesso imediato</li>
               </ul>
-              <Button>Quero o Plano Essencial</Button>
+              <Button href="https://lastlink.com/p/CCE28D64F/checkout-payment/">Quero o Plano Essencial</Button>
               <em>Conteúdo essencial para iniciar</em>
             </article>
             <article className="pricing-card complete">
@@ -396,7 +396,7 @@ export default function Home() {
                 <li>Novas músicas e atualizações</li>
                 <li>Suporte</li>
               </ul>
-              <Button>Quero acesso completo</Button>
+              <Button href="https://lastlink.com/p/CAA8A573E/checkout-payment/">Quero acesso completo</Button>
               <em>Acesso imediato a tudo</em>
             </article>
           </div>
