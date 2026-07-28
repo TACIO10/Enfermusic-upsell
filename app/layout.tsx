@@ -58,6 +58,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           async
           defer
         />
+        <script
+          data-goatcounter="https://tacio.goatcounter.com/count"
+          src="https://gc.zgo.at/count.js"
+          async
+        />
       </head>
       <body className={`${manrope.variable} ${playfair.variable}`}>{children}</body>
     </html>
