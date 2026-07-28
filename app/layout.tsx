@@ -36,6 +36,11 @@ export default function RootLayout({
           async
           defer
         />
+        <script
+          data-goatcounter="https://enfermeiro.goatcounter.com/count"
+          src="https://gc.zgo.at/count.js"
+          async
+        />
       </head>
       <body>{children}</body>
     </html>
