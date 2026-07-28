@@ -15,8 +15,6 @@
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
-    "lucide-react": "^1.27.0",
-    "magic-string": "^0.30.21",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"

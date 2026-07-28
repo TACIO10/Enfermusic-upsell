@@ -1,423 +1,423 @@
-const checkoutUrl = "#acesso";
+const essentialCheckout =
+  "https://lastlink.com/p/CCE28D64F/checkout-payment/?utm_source=organic";
+const completeCheckout =
+  "https://lastlink.com/p/CAA8A573E/checkout-payment/?utm_source=organic";
 
-const contents = [
-  "Sistema Único de Saúde (SUS)", "Ética em Enfermagem", "Saúde Coletiva",
-  "Farmacologia", "Urgência", "Emergência", "Biossegurança",
-  "Saúde da Mulher", "Saúde da Criança", "Processo de Enfermagem",
-  "Administração de Medicamentos", "Legislação em Enfermagem",
+const subjects = [
+  "Sistema Único de Saúde (SUS)",
+  "Ética em Enfermagem",
+  "Saúde Coletiva",
+  "Farmacologia",
+  "Urgência e Emergência",
+  "Biossegurança",
+  "Saúde da Mulher",
+  "Saúde da Criança",
+  "Processo de Enfermagem",
+  "Administração de Medicamentos",
+  "Legislação em Enfermagem",
+  "Outros temas dos principais editais",
 ];
 
-const faqs = [
-  ["O Método da Memória Musical substitui meus estudos?", "Não. Ele complementa sua preparação e ajuda a tornar as revisões mais frequentes."],
-  ["Posso ouvir pelo celular?", "Sim. A plataforma pode ser acessada pelo celular e pelo computador."],
-  ["Preciso saber cantar?", "Não. Basta ouvir as músicas regularmente para reforçar o contato com os conteúdos."],
-  ["Terei acesso imediatamente?", "Sim. Após a confirmação do pagamento, o acesso é liberado."],
+const audios = [
+  {
+    number: "01",
+    title: "Atenção Primária",
+    description: "Fundamentos da Atenção Primária transformados em revisão musical.",
+    src: "/media/atencao-primaria.mp3",
+  },
+  {
+    number: "02",
+    title: "Os Três Pilares da Saúde",
+    description: "Conceitos essenciais reforçados de uma forma mais leve.",
+    src: "/media/tres-pilares-saude.mp3",
+  },
+  {
+    number: "03",
+    title: "SUS em Ação",
+    description: "Uma amostra musical sobre o Sistema Único de Saúde.",
+    src: "/media/sus-em-acao.mp3",
+  },
 ];
 
-function Button({ children, href = checkoutUrl }: { children: React.ReactNode; href?: string }) {
-  return <a className="cta" href={href}>{children}<span aria-hidden="true">→</span></a>;
-}
-
-function CheckList({ items }: { items: string[] }) {
-  return <ul className="fold-checks">{items.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>;
-}
-
-function ProofPlaceholder({ type, index }: { type: string; index: number }) {
-  return <div className={`media-proof media-proof-${index % 3}`}><span>0{index}</span><div className="media-icon" aria-hidden="true">{type === "Vídeo" ? "▶" : type === "Áudio" ? "♪" : "▧"}</div><strong>{type}</strong><small>Insira aqui uma prova real autorizada</small></div>;
-}
+const bonuses = [
+  {
+    number: "01",
+    title: "Checklist dos assuntos mais cobrados",
+    text: "Saiba o que priorizar e acompanhe sua evolução pelos temas com maior incidência.",
+    image: "/media/bonus-checklist.webp",
+  },
+  {
+    number: "02",
+    title: "Banco de questões comentadas",
+    text: "Pratique após cada revisão com questões organizadas por disciplina.",
+    image: "/media/bonus-questoes.webp",
+  },
+  {
+    number: "03",
+    title: "Comunidade exclusiva de alunos",
+    text: "Troque experiências, tire dúvidas e acompanhe as novidades do método.",
+    image: "/media/bonus-comunidade.webp",
+  },
+];
 
 export default function Home() {
   return (
     <main>
-      <header className="topbar">
-        <a className="brand" href="#inicio" aria-label="Memória Musical - início"><span className="brand-mark"><i/><i/><i/><i/></span><span>MEMÓRIA <b>MUSICAL</b></span></a>
-        <a className="top-link" href="#conteudos">O que você recebe</a>
-      </header>
-
       <section className="hero" id="inicio">
-        <div className="hero-shade" />
-        <div className="container hero-grid">
+        <nav className="nav wrap">
+          <a className="brand" href="#inicio" aria-label="Memória Musical — início">
+            <span className="brand-mark">♪</span>
+            <span>MEMÓRIA MUSICAL</span>
+          </a>
+          <a className="nav-link" href="#oferta">Ver planos</a>
+        </nav>
+
+        <div className="hero-grid wrap">
           <div className="hero-copy">
-            <div className="eyebrow"><span/>Para concursos de enfermagem</div>
-            <h1>Memorize os assuntos mais cobrados nos concursos de enfermagem com apenas <em>20 minutos por dia</em></h1>
-            <div className="hero-offer-showcase">
-              <img src="/oferta-memoria-musical.webp" width="1536" height="1024" fetchPriority="high" decoding="async" alt="Método da Memória Musical com aplicativo, comunidade, banco de questões e checklist" />
+            <span className="eyebrow light">Para concursos de enfermagem</span>
+            <h1>
+              Faça a matéria <em>voltar à memória</em> quando a questão aparecer.
+            </h1>
+            <p className="lead">
+              Reforce os assuntos mais cobrados com músicas criadas para acompanhar
+              seus plantões, deslocamentos e os poucos minutos livres do dia.
+            </p>
+            <div className="hero-actions">
+              <a className="button primary" href="#experimente">
+                Ouvir uma amostra grátis <span>→</span>
+              </a>
+              <span className="microcopy">Sem cadastro · Dê o play agora</span>
             </div>
-            <p className="hero-lead">Reforce os conteúdos mais importantes mesmo com plantões, filhos e uma rotina apertada.</p>
-            <Button>Quero memorizar melhor agora</Button>
-            <p className="microcopy"><span>✓</span>Acesso pelo celular <span>✓</span>Liberação imediata</p>
+            <div className="hero-proof">
+              <span>✓ Acesso imediato</span>
+              <span>✓ Celular e computador</span>
+              <span>✓ Garantia de 30 dias</span>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="fold fernanda-story">
-        <div className="container">
-          <div className="fold-kicker">Uma jornada possível</div>
-          <h2>A história da Fernanda poderia ser a sua.</h2>
-          <p className="story-subtitle">De candidata frustrada... à aprovação.</p>
-
-          <div className="story-timeline">
-            <article className="story-stage">
-              <div className="story-media study-media"><img src="/fernanda-antes.webp" width="650" height="871" loading="lazy" decoding="async" alt="Mesa de estudos da Fernanda com computador, materiais e estetoscópio" /></div>
-              <div className="story-copy">
-                <div className="stage-head"><span>ETAPA 1 — ANTES</span><time>Janeiro de 2025</time></div>
-                <blockquote>“Eu estudava todos os dias... mas parecia que nunca era suficiente.”</blockquote>
-                <CheckList items={["Lia PDFs enormes.", "Fazia resumos intermináveis.", "Assistia horas de videoaulas.", "Estudava sempre que podia."]}/>
-                <p>Mas poucos dias depois... já tinha esquecido boa parte do conteúdo.</p>
-                <blockquote className="small-quote">“Na hora das questões eu sabia que tinha estudado aquele assunto, mas simplesmente não conseguia lembrar da resposta.”</blockquote>
+          <div className="hero-visual">
+            <div className="visual-orbit orbit-one" />
+            <div className="visual-orbit orbit-two" />
+            <img
+              src="/media/oferta-memoria-musical.webp"
+              alt="Método da Memória Musical no celular com comunidade, questões e checklist"
+            />
+            <div className="floating-card">
+              <span className="sound-bars"><i /><i /><i /><i /><i /></span>
+              <div>
+                <small>Agora tocando</small>
+                <strong>Revisão de SUS</strong>
               </div>
-            </article>
-
-            <div className="timeline-connector"><span>↓</span></div>
-
-            <article className="story-stage reverse">
-              <div className="story-media turning-media"><img src="/fernanda-virada.webp" width="1000" height="400" loading="lazy" decoding="async" alt="Fones de ouvido sobre materiais de estudo, representando a mudança na forma de revisar" /></div>
-              <div className="story-copy">
-                <div className="stage-head"><span>ETAPA 2 — A VIRADA</span><time>Abril de 2025</time></div>
-                <h3>Fernanda decidiu mudar a forma de revisar.</h3>
-                <p>Ao invés de depender apenas de PDFs e resumos, começou a utilizar o Método da Memória Musical para reforçar os conteúdos durante a rotina.</p>
-                <p>Agora ela revisava:</p>
-                <CheckList items={["No trânsito.", "Enquanto tomava café.", "Nos intervalos do plantão.", "Caminhando."]}/>
-                <strong>Sem precisar encontrar horas extras para estudar.</strong>
-              </div>
-            </article>
-
-            <div className="timeline-connector"><span>↓</span></div>
-
-            <article className="story-stage">
-              <div className="story-media approved-media"><img src="/fernanda-depois.webp" width="1175" height="1338" loading="lazy" decoding="async" alt="Fernanda sorrindo com roupa hospitalar após a aprovação" /></div>
-              <div className="story-copy">
-                <div className="stage-head"><span>ETAPA 3 — DEPOIS</span><time>Novembro de 2025</time></div>
-                <blockquote>“Na prova, a sensação foi completamente diferente.”</blockquote>
-                <p>Em várias questões, ela lembrava naturalmente dos conteúdos que havia revisado ao longo das semanas.</p>
-                <p>Em vez de tentar decorar tudo na última hora, ela havia reforçado o aprendizado continuamente.</p>
-                <div className="story-result"><span>O resultado?</span><strong>Mais segurança durante a prova e a conquista da aprovação.</strong></div>
-              </div>
-            </article>
-          </div>
-
-          <div className="story-final">
-            <p>Você não precisa estudar o dobro.</p>
-            <strong>Você precisa encontrar uma forma de revisar melhor.</strong>
-            <span>Foi exatamente para isso que criamos o Método da Memória Musical.</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="fold social-first">
-        <div className="container">
-          <div className="fold-kicker">Criado para a rotina real</div>
-          <h2>Para quem precisa estudar mesmo com pouco tempo.</h2>
-          <div className="credibility-audience">
-            {["Estudantes", "Técnicos de Enfermagem", "Enfermeiros", "Quem trabalha em plantões", "Quem estuda para concursos"].map((item, i)=><div key={item}><span>0{i+1}</span><strong>{item}</strong></div>)}
+      <section className="problem section">
+        <div className="wrap narrow">
+          <span className="eyebrow">A frustração é conhecida</span>
+          <h2>Você estudou. Mas, na prova, a resposta simplesmente não veio.</h2>
+          <p className="section-intro">
+            PDFs longos e horas de videoaula podem ensinar o conteúdo. O problema
+            aparece depois: encontrar tempo e energia para reencontrar a matéria
+            vezes suficientes para ela permanecer acessível.
+          </p>
+          <div className="memory-test">
+            <div>
+              <span className="test-label">Complete mentalmente:</span>
+              <blockquote>“Parabéns pra…”</blockquote>
+              <strong>Fácil, não é?</strong>
+            </div>
+            <div className="divider-arrow">→</div>
+            <div>
+              <span className="test-label">Agora tente lembrar:</span>
+              <blockquote>O 5º tópico do último PDF</blockquote>
+              <strong>Percebe a diferença?</strong>
+            </div>
           </div>
-          <div className="authority-numbers">
-            <div><Users aria-hidden="true"/><strong>2.347</strong><span>alunos</span></div>
-            <div><PlayCircle aria-hidden="true"/><strong>186.420</strong><span>reproduções</span></div>
-            <div><Clock3 aria-hidden="true"/><strong>8.915</strong><span>horas estudadas</span></div>
-          </div>
+          <p className="insight">
+            O problema não é falta de capacidade. <strong>É a forma como a revisão
+            cabe — ou não cabe — na sua rotina.</strong>
+          </p>
         </div>
       </section>
 
-      <section className="fold pain-fold">
-        <div className="container narrow">
-          <div className="fold-kicker">Sua rotina de estudos</div>
-          <h2>Você já passou por isso?</h2>
-          <CheckList items={["Estuda durante horas.", "Faz resumos enormes.", "Assiste videoaulas.", "Resolve questões.", "E poucos dias depois já esqueceu boa parte do conteúdo."]}/>
-          <div className="exam-pain"><span>Na hora da prova...</span><p>Você sabe que estudou aquilo.</p><strong>Mas a resposta simplesmente não vem.</strong></div>
-        </div>
-      </section>
-
-      <section className="fold test-fold">
-        <div className="container memory-test">
-          <div className="test-label">Faça um teste</div>
-          <p>Complete mentalmente.</p>
-          <blockquote>“Parabéns pra...”</blockquote>
-          <p>Você completou.</p>
-          <div className="test-divider"/>
-          <p>Agora tente lembrar o quinto tópico do último PDF que estudou.</p>
-          <strong className="difficult">Percebe a diferença?</strong>
-          <p>Seu cérebro tende a recuperar com muito mais facilidade informações que foram reforçadas repetidamente por meio de padrões sonoros.</p>
-          <p>Foi exatamente dessa ideia que nasceu o <strong>Método da Memória Musical.</strong></p>
-        </div>
-      </section>
-
-      <section className="fold memory-fold">
-        <div className="container split">
-          <div className="brain-visual compact-brain"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="brain-core"><span>♪</span><small>MEMÓRIA</small><b>+</b><small>REPETIÇÃO</small></div></div>
+      <section className="mechanism section dark">
+        <div className="wrap mechanism-grid">
           <div>
-            <div className="fold-kicker light">Por que isso acontece</div>
-            <h2>O problema nunca foi sua memória.</h2>
-            <p>Você consegue lembrar músicas que ouviu anos atrás.</p>
-            <p>Mas provavelmente não consegue lembrar o conteúdo do último PDF que estudou.</p>
-            <p>Então o problema não é sua memória.</p>
-            <strong>É a forma como você revisa.</strong>
+            <span className="eyebrow light">O mecanismo</span>
+            <h2>Você não precisa encontrar mais horas. Precisa reencontrar a matéria mais vezes.</h2>
+          </div>
+          <div className="mechanism-copy">
+            <p>
+              O Método da Memória Musical transforma conteúdos recorrentes dos
+              concursos de enfermagem em faixas organizadas por disciplina.
+            </p>
+            <p>
+              Assim, sua revisão pode continuar no trânsito, no intervalo do
+              plantão, caminhando ou cuidando da casa — sem substituir seu estudo
+              principal.
+            </p>
+          </div>
+          <div className="routine-strip">
+            {["Estude", "Dê o play", "Reencontre", "Reconheça"].map((item, index) => (
+              <div key={item}>
+                <span>0{index + 1}</span>
+                <strong>{item}</strong>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="fold origin-fold">
-        <div className="container narrow">
-          <div className="fold-kicker">Como tudo começou</div>
-          <h2>Uma pergunta simples deu origem ao método.</h2>
-          <div className="origin-story">
-            <p>Se músicas permanecem na memória por tantos anos, por que os conteúdos estudados desaparecem em poucos dias?</p>
-            <p>A resposta não estava em estudar ainda mais. Estava em criar uma forma mais prática de reencontrar a matéria várias vezes durante a rotina.</p>
-            <strong>Foi dessa busca que nasceu o Método da Memória Musical: transformar a revisão em algo que pode acompanhar o concurseiro ao longo do dia.</strong>
+      <section className="listen section" id="experimente">
+        <div className="wrap">
+          <div className="section-heading split-heading">
+            <div>
+              <span className="eyebrow">Experimente o método</span>
+              <h2>Dê o play antes de decidir.</h2>
+            </div>
+            <p>Três amostras para sentir como a revisão pode acompanhar o seu dia.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="fold method-fold">
-        <div className="container">
-          <div className="fold-kicker">Um sistema de revisão</div>
-          <h2>Conheça o Método da Memória Musical</h2>
-          <p className="fold-lead">Um sistema de revisão criado para ajudar concurseiros da Enfermagem a reforçar os conteúdos mais cobrados por meio de músicas organizadas por disciplina.</p>
-          <div className="where-grid">
-            {[[CarFront,"Dirigindo"],[Hospital,"No plantão"],[Footprints,"Caminhando"],[Dumbbell,"Treinando"],[House,"Em casa"]].map(([Icon,text])=><div key={String(text)}><span><Icon aria-hidden="true"/></span><strong>{String(text)}</strong></div>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="fold audio-samples">
-        <div className="container">
-          <div className="fold-kicker light">Ouça agora</div>
-          <h2>Dê o play e experimente o método.</h2>
-          <p className="fold-lead">Três exemplos para você sentir como os conteúdos de enfermagem podem acompanhar sua rotina.</p>
-          <div className="audio-sample-grid">
-            {[
-              ["01", "Atenção Primária", "Revisão musical sobre os fundamentos da Atenção Primária.", "/atencao-primaria.mp3"],
-              ["02", "Os Três Pilares da Saúde", "Uma faixa para reforçar conceitos essenciais de forma mais leve.", "/tres-pilares-saude.mp3"],
-              ["03", "SUS em Ação", "Conteúdos do Sistema Único de Saúde apresentados em formato musical.", "/sus-em-acao.mp3"],
-            ].map(([number, title, description, src]) => (
-              <article className="sample-card" key={title}>
-                <div className="sample-cover"><span>{number}</span><Music2 aria-hidden="true"/><i/><i/><i/><i/><i/></div>
-                <div className="sample-copy"><small>FAIXA DE EXEMPLO</small><h3>{title}</h3><p>{description}</p></div>
-                <audio controls preload="none" aria-label={`Ouvir ${title}`}><source src={src} type="audio/mpeg"/>Seu navegador não suporta reprodução de áudio.</audio>
-                <div className="listen-anywhere"><Headphones aria-hidden="true"/><span>Ouça pelo celular ou computador</span></div>
+          <div className="audio-grid">
+            {audios.map((audio) => (
+              <article className="audio-card" key={audio.title}>
+                <div className="audio-top">
+                  <span>{audio.number}</span>
+                  <span className="audio-icon">♪</span>
+                </div>
+                <h3>{audio.title}</h3>
+                <p>{audio.description}</p>
+                <audio controls preload="none" aria-label={`Ouvir ${audio.title}`}>
+                  <source src={audio.src} type="audio/mpeg" />
+                </audio>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="fold routine-fold">
-        <div className="container">
-          <div className="fold-kicker">Cabe na vida real</div>
-          <h2>Estude até quando você não está estudando.</h2>
-          <div className="routine-four">
-            {[[CarFront,"01","Trânsito","Transforme o caminho em revisão."],[Hospital,"02","Intervalo do plantão","Use uma pausa para reforçar um assunto."],[Dumbbell,"03","Academia","Ouça enquanto movimenta o corpo."],[House,"04","Tarefas de casa","Continue revisando dentro da sua rotina."]].map(([Icon,n,t,d])=><article key={String(t)}><span>{String(n)}</span><div className="routine-icon"><Icon aria-hidden="true"/></div><h3>{String(t)}</h3><p>{String(d)}</p></article>)}
+      <section className="fit section">
+        <div className="wrap fit-grid">
+          <div className="fit-visual">
+            <img src="/media/fernanda-virada.webp" alt="Fones de ouvido sobre materiais de estudo" />
+            <div className="time-badge"><strong>20</strong><span>minutos<br />por dia</span></div>
           </div>
-        </div>
-      </section>
-
-      <section className="fold how-fold">
-        <div className="container">
-          <div className="fold-kicker light">Passo a passo</div>
-          <h2>Como funciona</h2>
-          <div className="steps-flow">
-            {["Escolha a disciplina.", "Dê o play.", "Ouça durante sua rotina.", "Revise naturalmente.", "Chegue mais preparado para a prova."].map((step,i)=><div key={step}><span>{["①","②","③","④","⑤"][i]}</span><strong>{step}</strong>{i<4&&<i aria-hidden="true">↓</i>}</div>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="fold imagine-fold">
-        <div className="container imagine-grid">
           <div>
-            <div className="fold-kicker light">Na hora da prova</div>
-            <h2>Imagine entrar na prova.</h2>
-            <div className="exam-sequence"><p>Você lê uma questão sobre <strong>SUS.</strong><span>Lembra da música.</span></p><p>Depois uma questão sobre <strong>vacinação.</strong><span>Mais uma música.</span></p><p>Depois <strong>urgência.</strong><span>Outra música.</span></p></div>
-            <blockquote>Você não tenta decorar. Você apenas reconhece uma informação revisada várias vezes.</blockquote>
-          </div>
-          <div className="question-card"><div className="question-head"><span>SIMULADO</span><small>Questão 14 de 30</small></div><p>Os princípios doutrinários do Sistema Único de Saúde incluem:</p><div className="option">A <span>Centralização e seletividade</span></div><div className="option correct">B <span>Universalidade, integralidade e equidade</span><b>✓</b></div><div className="memory-cue"><i>♪</i><div><small>A memória conectou</small><strong>“Universal para todos...”</strong></div></div></div>
-        </div>
-      </section>
-
-      <section className="fold content-fold" id="conteudos">
-        <div className="container">
-          <div className="fold-kicker">Dentro da plataforma</div>
-          <h2>Tudo o que você recebe</h2>
-          <div className="content-grid">{contents.map((item,i)=><div key={item}><span>✓</span><strong>{item}</strong><small>{String(i+1).padStart(2,"0")}</small></div>)}</div>
-          <p className="content-more">Além de outros conteúdos presentes nos principais editais.</p>
-        </div>
-      </section>
-
-      <section className="fold routine-prep">
-        <div className="container split">
-          <div><div className="fold-kicker">Para quem tem vida real</div><h2>Uma preparação que acompanha sua rotina.</h2><p>Revisões rápidas, organizadas e acessíveis nos dispositivos que já fazem parte do seu dia.</p></div>
-          <CheckList items={["Trabalha em plantões", "Tem pouco tempo", "Precisa de revisões rápidas", "Acesso pelo celular", "Acesso pelo computador", "Recebe atualizações"]}/>
-        </div>
-      </section>
-
-      <section className="fold comparison-fold">
-        <div className="container">
-          <div className="fold-kicker">Compare as duas experiências</div>
-          <h2>Qual forma de revisar cabe melhor na sua rotina?</h2>
-          <div className="comparison-grid">
-            <div className="comparison-card traditional"><span>ESTUDO TRADICIONAL</span><h3>Mais esforço para revisar</h3><ul><li>PDFs enormes</li><li>Revisões cansativas</li><li>Difícil revisar diariamente</li><li>Muito tempo lendo</li></ul></div>
-            <div className="comparison-versus">ou</div>
-            <div className="comparison-card musical"><span>MEMÓRIA MUSICAL</span><h3>Mais frequência na rotina</h3><ul><li>Revisões rápidas</li><li>Ouça em qualquer lugar</li><li>Mais frequência</li><li>Fácil de encaixar na rotina</li></ul></div>
+            <span className="eyebrow">Feito para a rotina real</span>
+            <h2>Revise até quando você não está “sentada para estudar”.</h2>
+            <div className="use-list">
+              {[
+                ["No trânsito", "Transforme o deslocamento em revisão."],
+                ["No plantão", "Use uma pausa curta para reencontrar um tema."],
+                ["Nas tarefas", "Continue ouvindo enquanto cuida da rotina."],
+                ["Na caminhada", "Movimente o corpo sem abandonar o conteúdo."],
+              ].map(([title, text], index) => (
+                <div key={title}>
+                  <span>0{index + 1}</span>
+                  <p><strong>{title}</strong>{text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="fold students-fold">
-        <div className="container">
-          <h2>O que dizem os alunos</h2>
-          <p className="fold-lead">Relatos de alunas que incluíram as músicas na rotina de estudos.</p>
-          <div className="testimonial-gallery">
-            <figure>
-              <img src="/depoimento-juliana.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Juliana Rocha sobre o Método da Memória Musical" />
-              <figcaption>Juliana Rocha</figcaption>
-            </figure>
-            <figure>
-              <img src="/depoimento-camila.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Camila Santos sobre o Método da Memória Musical" />
-              <figcaption>Camila Santos</figcaption>
-            </figure>
-            <figure>
-              <img src="/depoimento-amanda.webp" width="853" height="1844" loading="lazy" decoding="async" alt="Depoimento de Amanda Ferreira sobre o Método da Memória Musical" />
-              <figcaption>Amanda Ferreira</figcaption>
-            </figure>
+      <section className="contents section" id="conteudos">
+        <div className="wrap">
+          <div className="section-heading center">
+            <span className="eyebrow">Dentro da plataforma</span>
+            <h2>Os temas que mais aparecem nos editais, prontos para acompanhar você.</h2>
           </div>
-        </div>
-      </section>
-
-      <section className="fold access-fold" id="acesso">
-        <div className="container opportunity">
-          <div className="fold-kicker light">Uma oportunidade de revisar diferente</div>
-          <h2>Hoje você recebe acesso completo a:</h2>
-          <div className="bonuses">
-            <div className="bonuses-heading">
-              <Gift aria-hidden="true" />
-              <div>
-                <span>Bônus exclusivos</span>
-                <h3>Ao garantir seu acesso hoje, você também recebe gratuitamente:</h3>
+          <div className="subject-grid">
+            {subjects.map((subject, index) => (
+              <div key={subject}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{subject}</strong>
               </div>
-            </div>
-            <div className="bonus-grid">
-              <article>
-                <div className="bonus-product"><img src="/bonus-checklist.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Capa do Checklist dos Assuntos Mais Cobrados" /></div>
-                <span>BÔNUS #1</span>
-                <h3>Checklist dos Assuntos Mais Cobrados</h3>
-                <p>Saiba exatamente quais conteúdos priorizar na sua preparação para os concursos de Enfermagem.</p>
-                <p>Você receberá um checklist organizado pelos temas com maior incidência nas provas, permitindo acompanhar sua evolução e revisar o que realmente importa.</p>
-                <del>De R$ 67,00</del>
-                <strong>GRÁTIS</strong>
-              </article>
-              <article>
-                <div className="bonus-product"><img src="/bonus-questoes.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Capa do Banco de Questões Comentadas por Tema" /></div>
-                <span>BÔNUS #2</span>
-                <h3>Banco de Questões Comentadas por Tema</h3>
-                <p>Coloque seu conhecimento em prática logo após cada revisão.</p>
-                <p>Questões organizadas por disciplina, com comentários para ajudar a compreender os principais pontos cobrados pelas bancas.</p>
-                <del>De R$ 97,00</del>
-                <strong>GRÁTIS</strong>
-              </article>
-              <article>
-                <div className="bonus-product"><img src="/bonus-comunidade.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Capa da Comunidade Exclusiva de Alunos" /></div>
-                <span>BÔNUS #3</span>
-                <h3>Comunidade Exclusiva de Alunos</h3>
-                <p>Tenha acesso a uma comunidade exclusiva para trocar experiências, tirar dúvidas, acompanhar novidades e manter a motivação durante toda a preparação.</p>
-                <ul>
-                  <li>Compartilhe sua evolução.</li>
-                  <li>Tire dúvidas com outros alunos.</li>
-                  <li>Receba atualizações em primeira mão.</li>
-                  <li>Estude com pessoas que têm o mesmo objetivo.</li>
-                </ul>
-                <del>De R$ 37,00</del>
-                <strong>GRÁTIS</strong>
-              </article>
-            </div>
+            ))}
           </div>
-          <section className="value-stack">
-            <div className="value-stack-intro">
-              <span>Resumo da sua condição</span>
-              <h3>Tudo o que você recebe hoje</h3>
+          <div className="center-cta">
+            <a className="button dark-button" href="#oferta">Quero escolher meu acesso <span>↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="comparison section dark">
+        <div className="wrap">
+          <div className="section-heading center light-heading">
+            <span className="eyebrow light">Menos atrito, mais frequência</span>
+            <h2>Qual revisão tem mais chance de caber no seu dia?</h2>
+          </div>
+          <div className="compare-grid">
+            <article className="compare-old">
+              <span className="compare-label">Revisão tradicional</span>
+              <h3>Depende de parar tudo.</h3>
+              <ul>
+                <li>× PDFs extensos para reler</li>
+                <li>× Mais tempo diante da tela</li>
+                <li>× Difícil manter todos os dias</li>
+                <li>× Revisões deixadas para depois</li>
+              </ul>
+            </article>
+            <article className="compare-new">
+              <span className="compare-label">Memória Musical</span>
+              <h3>Acompanha o que você já faz.</h3>
+              <ul>
+                <li>✓ Faixas rápidas por disciplina</li>
+                <li>✓ Ouça pelo celular</li>
+                <li>✓ Mais contato com os conteúdos</li>
+                <li>✓ Fácil de repetir na rotina</li>
+              </ul>
+            </article>
+          </div>
+          <p className="disclaimer-inline">
+            O método é complementar: não substitui aulas, leitura ou resolução de questões.
+          </p>
+        </div>
+      </section>
+
+      <section className="bonuses section">
+        <div className="wrap">
+          <div className="section-heading split-heading">
+            <div>
+              <span className="eyebrow">No plano completo</span>
+              <h2>Três recursos para transformar revisão em preparação.</h2>
             </div>
-            <div className="value-items">
-              <article>
-                <div><strong>Método da Memória Musical®</strong><p>Aprenda a memorizar os assuntos mais cobrados através de músicas criadas especialmente para concursos de enfermagem.</p></div>
-                <b>R$ 127,00</b>
+            <p>Ouça, priorize o que estudar, pratique e mantenha o ritmo com outros alunos.</p>
+          </div>
+          <div className="bonus-grid">
+            {bonuses.map((bonus) => (
+              <article key={bonus.title}>
+                <img src={bonus.image} alt={`Capa: ${bonus.title}`} />
+                <div className="bonus-copy">
+                  <span>Bônus {bonus.number}</span>
+                  <h3>{bonus.title}</h3>
+                  <p>{bonus.text}</p>
+                  <strong>Incluído no Plano Completo</strong>
+                </div>
               </article>
-              <article>
-                <div><strong>Bônus 1 — Checklist dos Assuntos Mais Cobrados</strong><p>Saiba exatamente quais conteúdos priorizar para estudar de forma mais estratégica.</p></div>
-                <b>R$ 67,00</b>
-              </article>
-              <article>
-                <div><strong>Bônus 2 — Banco de Questões Comentadas por Tema</strong><p>Treine com questões organizadas por assunto e fortaleça sua memorização.</p></div>
-                <b>R$ 97,00</b>
-              </article>
-              <article>
-                <div><strong>Bônus 3 — Comunidade Exclusiva de Alunos</strong><p>Tire dúvidas, compartilhe sua evolução e receba atualizações exclusivas.</p></div>
-                <b>R$ 37,00</b>
-              </article>
-            </div>
-            <div className="package-total">
-              <span>Valor total do pacote</span>
-              <strong>R$ 328,00</strong>
-            </div>
-            <div className="special-condition">
-              <p>Você poderia pagar <strong>R$ 328,00</strong> por todo esse material.</p>
-              <p>Afinal, cada recurso foi desenvolvido para acelerar sua preparação e aumentar suas chances de aprovação.</p>
-              <div>
-                <span>Mas hoje você não vai pagar R$ 328,00.</span>
-                <span>Nem R$ 197,00.</span>
-                <span>Nem R$ 127,00.</span>
-              </div>
-              <p>Você terá acesso ao <strong>Método da Memória Musical®</strong>, juntamente com <strong>todos os bônus</strong>, por uma condição especial disponível apenas nesta página.</p>
-            </div>
-          </section>
-          <div className="pricing-options">
-            <article className="pricing-card essential">
-              <div className="plan-label">Plano Essencial</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials section soft">
+        <div className="wrap">
+          <div className="section-heading center">
+            <span className="eyebrow">Experiência de alunas</span>
+            <h2>Veja os relatos de quem incluiu as músicas na rotina.</h2>
+          </div>
+          <div className="testimonial-grid">
+            {[
+              ["depoimento-juliana.webp", "Depoimento de Juliana Rocha"],
+              ["depoimento-camila.webp", "Depoimento de Camila Santos"],
+              ["depoimento-amanda.webp", "Depoimento de Amanda Ferreira"],
+            ].map(([image, alt]) => (
+              <figure key={image}><img src={`/media/${image}`} alt={alt} /></figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pricing section" id="oferta">
+        <div className="wrap">
+          <div className="section-heading center">
+            <span className="eyebrow">Escolha seu acesso</span>
+            <h2>Comece pelo essencial ou leve a preparação completa.</h2>
+            <p>Pagamento único e acesso liberado após a confirmação.</p>
+          </div>
+          <div className="price-grid">
+            <article className="price-card">
+              <span className="plan-tag">Plano Essencial</span>
               <h3>Para começar a revisar com música</h3>
-              <div className="plan-price"><small>Pagamento único</small><strong>R$ 19,90</strong></div>
+              <div className="price"><small>R$</small><strong>19</strong><small>,90</small></div>
+              <p className="payment">pagamento único</p>
               <ul>
-                <li>Método da Memória Musical</li>
-                <li>Trilhas com os assuntos essenciais</li>
-                <li>Acesso pelo celular e computador</li>
-                <li>Acesso imediato</li>
+                <li>✓ Método da Memória Musical</li>
+                <li>✓ Trilhas com assuntos essenciais</li>
+                <li>✓ Acesso pelo celular e computador</li>
+                <li>✓ Acesso imediato</li>
               </ul>
-              <Button href="https://lastlink.com/p/CCE28D64F/checkout-payment/">Quero o Plano Essencial</Button>
-              <em>Conteúdo essencial para iniciar</em>
+              <a className="button secondary" href={essentialCheckout}>Quero o Plano Essencial <span>→</span></a>
             </article>
-            <article className="pricing-card complete">
-              <div className="best-choice">Melhor escolha</div>
-              <div className="plan-label">Plano Completo</div>
+
+            <article className="price-card featured">
+              <span className="popular">Melhor escolha</span>
+              <span className="plan-tag">Plano Completo</span>
               <h3>Todo o método e todos os bônus</h3>
-              <div className="plan-price"><small>Pagamento único</small><strong>R$ 29,90</strong></div>
+              <div className="price"><small>R$</small><strong>29</strong><small>,90</small></div>
+              <p className="payment">pagamento único</p>
               <ul>
-                <li>Método da Memória Musical</li>
-                <li>Biblioteca completa de músicas</li>
-                <li>Checklist dos assuntos mais cobrados</li>
-                <li>Banco de questões comentadas</li>
-                <li>Comunidade exclusiva de alunos</li>
-                <li>Novas músicas e atualizações</li>
-                <li>Suporte</li>
+                <li>✓ Biblioteca completa de músicas</li>
+                <li>✓ Checklist dos assuntos mais cobrados</li>
+                <li>✓ Banco de questões comentadas</li>
+                <li>✓ Comunidade exclusiva</li>
+                <li>✓ Novas músicas e atualizações</li>
+                <li>✓ Suporte</li>
               </ul>
-              <Button href="https://lastlink.com/p/CAA8A573E/checkout-payment/">Quero acesso completo</Button>
-              <em>Acesso imediato a tudo</em>
+              <a className="button primary" href={completeCheckout}>Quero acesso completo <span>→</span></a>
             </article>
           </div>
+          <p className="secure-note">🔒 Compra segura · Liberação imediata · Garantia de 30 dias</p>
         </div>
       </section>
 
-      <section className="fold guarantee-fold">
-        <div className="container guarantee-box">
+      <section className="guarantee section dark">
+        <div className="wrap guarantee-grid">
           <div className="guarantee-seal"><strong>30</strong><span>DIAS</span></div>
           <div>
-            <div className="fold-kicker">Risco reduzido</div>
-            <h2>Ainda está em dúvida?</h2>
-            <p>Experimente durante 30 dias.</p>
-            <p>Se perceber que o Método da Memória Musical não faz sentido para sua rotina, basta solicitar o reembolso.</p>
-            <strong>Sem perguntas.</strong>
+            <span className="eyebrow light">Risco reduzido</span>
+            <h2>Ouça, explore e veja se o método cabe na sua rotina.</h2>
+            <p>
+              Você tem 30 dias para experimentar. Se perceber que o Método da
+              Memória Musical não faz sentido para você, basta solicitar o reembolso.
+            </p>
+            <strong>O risco fica do nosso lado.</strong>
           </div>
         </div>
       </section>
 
-      <section className="section faq"><div className="container faq-grid"><div><div className="section-tag">Perguntas frequentes</div><h2>Tire suas dúvidas.</h2></div><div className="faq-list">{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
-      <footer><div className="container"><a className="brand" href="#inicio"><span className="brand-mark"><i/><i/><i/><i/></span><span>MEMÓRIA <b>MUSICAL</b></span></a><p>© 2026 Método da Memória Musical. Todos os direitos reservados.</p><p className="disclaimer">Este produto é um recurso complementar de revisão e não garante aprovação. Resultados variam conforme dedicação, rotina de estudos e outros fatores individuais.</p></div></footer>
+      <section className="faq section">
+        <div className="wrap narrow">
+          <div className="section-heading">
+            <span className="eyebrow">Perguntas frequentes</span>
+            <h2>Antes de dar o play, tire suas dúvidas.</h2>
+          </div>
+          <div className="faq-list">
+            {[
+              ["O método substitui meus estudos?", "Não. Ele complementa sua preparação e ajuda a tornar as revisões mais frequentes."],
+              ["Posso ouvir pelo celular?", "Sim. O conteúdo pode ser acessado pelo celular e também pelo computador."],
+              ["Preciso saber cantar?", "Não. Você só precisa ouvir as faixas; cantar é totalmente opcional."],
+              ["O acesso é imediato?", "Sim. Após a confirmação do pagamento, você recebe as orientações de acesso."],
+              ["Qual é a diferença entre os planos?", "O Essencial traz as trilhas de entrada. O Completo inclui a biblioteca completa, bônus, atualizações, comunidade e suporte."],
+              ["Como funciona a garantia?", "Você pode experimentar por 30 dias e solicitar o reembolso dentro desse período se o método não fizer sentido para sua rotina."],
+            ].map(([question, answer]) => (
+              <details key={question}>
+                <summary>{question}<span>+</span></summary>
+                <p>{answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="final-cta">
+        <div className="wrap narrow">
+          <span className="eyebrow light">Sua próxima revisão pode começar agora</span>
+          <h2>Deixe a matéria acompanhar você — e não o contrário.</h2>
+          <p>Escolha o plano que combina com sua preparação e receba o acesso imediatamente.</p>
+          <a className="button primary" href="#oferta">Quero começar agora <span>↑</span></a>
+        </div>
+      </section>
+
+      <footer>
+        <div className="wrap footer-inner">
+          <a className="brand" href="#inicio"><span className="brand-mark">♪</span><span>MEMÓRIA MUSICAL</span></a>
+          <p>© 2026 Método da Memória Musical. Todos os direitos reservados.</p>
+          <p className="legal">Este produto é um recurso complementar de revisão e não garante aprovação. Resultados variam conforme dedicação, rotina de estudos e outros fatores individuais.</p>
+        </div>
+      </footer>
     </main>
   );
 }
-import { CarFront, Clock3, Dumbbell, Footprints, Gift, Headphones, Hospital, House, Music2, PlayCircle, Users } from "lucide-react";
