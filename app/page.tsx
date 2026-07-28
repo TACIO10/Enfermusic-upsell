@@ -339,7 +339,15 @@ export default function Home() {
                 <li>✓ Acesso pelo celular e computador</li>
                 <li>✓ Acesso imediato</li>
               </ul>
-              <a className="button secondary" href={essentialCheckout}>Quero o Plano Essencial <span>→</span></a>
+              <a
+                className="button secondary"
+                href={essentialCheckout}
+                data-goatcounter-click="checkout-plano-essencial-19-90"
+                data-goatcounter-title="Clique no checkout — Plano Essencial R$ 19,90"
+                data-goatcounter-no-session="1"
+              >
+                Quero o Plano Essencial <span>→</span>
+              </a>
             </article>
 
             <article className="price-card featured">
@@ -356,7 +364,15 @@ export default function Home() {
                 <li>✓ Novas músicas e atualizações</li>
                 <li>✓ Suporte</li>
               </ul>
-              <a className="button primary" href={completeCheckout}>Quero acesso completo <span>→</span></a>
+              <a
+                className="button primary"
+                href={completeCheckout}
+                data-goatcounter-click="checkout-plano-completo-29-90"
+                data-goatcounter-title="Clique no checkout — Plano Completo R$ 29,90"
+                data-goatcounter-no-session="1"
+              >
+                Quero acesso completo <span>→</span>
+              </a>
             </article>
           </div>
           <p className="secure-note">🔒 Compra segura · Liberação imediata · Garantia de 30 dias</p>
