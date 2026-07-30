@@ -178,11 +178,12 @@ h3 { font-size: 25px; }
 .plan-tag { color: var(--mint-dark); font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .featured .plan-tag { color: var(--lime); }
 .price-card h3 { max-width: 300px; margin: 18px 0 28px; font-size: 27px; }
-.price { display: flex; align-items: flex-start; margin-bottom: 0; }
+.price { display: flex; justify-content: center; align-items: flex-start; margin-bottom: 0; }
 .price strong { font-size: 74px; line-height: .85; letter-spacing: -.07em; }
 .price small { font-size: 19px; font-weight: 900; }
-.payment { color: #70847f; font-size: 12px; }
+.payment { color: #70847f; font-size: 12px; text-align: center; }
 .featured .payment { color: #abc1bc; }
+.installments { margin: 5px 0 0; color: var(--lime); font-size: 16px; font-weight: 900; text-align: center; }
 .price-card ul { min-height: 210px; margin: 32px 0; padding-top: 25px; border-top: 1px solid #d9e1dd; font-size: 14px; }
 .featured ul { border-color: rgba(255,255,255,.18); }
 .price-card .button { width: 100%; }

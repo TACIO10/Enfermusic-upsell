@@ -356,6 +356,7 @@ export default function Home() {
               <h3>Todo o método e todos os bônus</h3>
               <div className="price"><small>R$</small><strong>29</strong><small>,90</small></div>
               <p className="payment">pagamento único</p>
+              <p className="installments">ou 5x de R$ 6,63</p>
               <ul>
                 <li>✓ Biblioteca completa de músicas</li>
                 <li>✓ Checklist dos assuntos mais cobrados</li>
