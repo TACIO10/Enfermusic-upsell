@@ -210,14 +210,23 @@ export default function Home() {
                   <span className="collection-index">Disciplina 02</span>
                   <h3>Farmacologia e Administração de Medicamentos</h3>
                 </div>
-                <span className="collection-count">Trilha da plataforma</span>
+                <span className="collection-count">1 amostra disponível</span>
               </div>
               <div className="pharma-content">
-                <div>
+                <article className="pharma-audio-card">
                   <span className="pharma-kicker">Revisão direcionada</span>
-                  <h4>Reforce conceitos essenciais para uma administração segura.</h4>
-                  <p>Uma seção organizada para acompanhar sua revisão de medicamentos durante a rotina.</p>
-                </div>
+                  <div className="pharma-track-title">
+                    <div>
+                      <small>Faixa 01</small>
+                      <h4>Classe Farmacológica</h4>
+                    </div>
+                    <span className="audio-icon">♪</span>
+                  </div>
+                  <p>Uma amostra musical para reforçar conceitos de Farmacologia durante a rotina.</p>
+                  <audio controls preload="none" aria-label="Ouvir Classe Farmacológica">
+                    <source src="/media/classe-farmacologica.mp3" type="audio/mpeg" />
+                  </audio>
+                </article>
                 <ul>
                   <li>Fundamentos de Farmacologia</li>
                   <li>Vias de administração</li>
