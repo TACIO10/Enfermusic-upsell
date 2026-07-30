@@ -172,27 +172,60 @@ export default function Home() {
 
       <section className="listen section" id="experimente">
         <div className="wrap">
-          <div className="section-heading split-heading">
-            <div>
-              <span className="eyebrow">Experimente o método</span>
-              <h2>Dê o play antes de decidir.</h2>
-            </div>
-            <p>Três amostras para sentir como a revisão pode acompanhar o seu dia.</p>
+          <div className="section-heading center listen-heading">
+            <span className="eyebrow">Experimente o método</span>
+            <h2>Escolha uma disciplina e dê o play.</h2>
+            <p>Conheça a experiência de revisar por músicas antes de escolher seu acesso.</p>
           </div>
-          <div className="audio-grid">
-            {audios.map((audio) => (
-              <article className="audio-card" key={audio.title}>
-                <div className="audio-top">
-                  <span>{audio.number}</span>
-                  <span className="audio-icon">♪</span>
+
+          <div className="sample-library">
+            <section className="sample-collection">
+              <div className="collection-heading">
+                <div>
+                  <span className="collection-index">Disciplina 01</span>
+                  <h3>Saúde Pública e SUS</h3>
                 </div>
-                <h3>{audio.title}</h3>
-                <p>{audio.description}</p>
-                <audio controls preload="none" aria-label={`Ouvir ${audio.title}`}>
-                  <source src={audio.src} type="audio/mpeg" />
-                </audio>
-              </article>
-            ))}
+                <span className="collection-count">3 amostras disponíveis</span>
+              </div>
+              <div className="audio-grid">
+                {audios.map((audio) => (
+                  <article className="audio-card" key={audio.title}>
+                    <div className="audio-top">
+                      <span>Faixa {audio.number}</span>
+                      <span className="audio-icon">♪</span>
+                    </div>
+                    <h4>{audio.title}</h4>
+                    <p>{audio.description}</p>
+                    <audio controls preload="none" aria-label={`Ouvir ${audio.title}`}>
+                      <source src={audio.src} type="audio/mpeg" />
+                    </audio>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="sample-collection pharma-collection">
+              <div className="collection-heading">
+                <div>
+                  <span className="collection-index">Disciplina 02</span>
+                  <h3>Farmacologia e Administração de Medicamentos</h3>
+                </div>
+                <span className="collection-count">Trilha da plataforma</span>
+              </div>
+              <div className="pharma-content">
+                <div>
+                  <span className="pharma-kicker">Revisão direcionada</span>
+                  <h4>Reforce conceitos essenciais para uma administração segura.</h4>
+                  <p>Uma seção organizada para acompanhar sua revisão de medicamentos durante a rotina.</p>
+                </div>
+                <ul>
+                  <li>Fundamentos de Farmacologia</li>
+                  <li>Vias de administração</li>
+                  <li>Cálculo e diluição de medicamentos</li>
+                  <li>Segurança na administração</li>
+                </ul>
+              </div>
+            </section>
           </div>
         </div>
       </section>
