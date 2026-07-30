@@ -210,23 +210,39 @@ export default function Home() {
                   <span className="collection-index">Disciplina 02</span>
                   <h3>Farmacologia e Administração de Medicamentos</h3>
                 </div>
-                <span className="collection-count">1 amostra disponível</span>
+                <span className="collection-count">2 amostras disponíveis</span>
               </div>
               <div className="pharma-content">
-                <article className="pharma-audio-card">
-                  <span className="pharma-kicker">Revisão direcionada</span>
-                  <div className="pharma-track-title">
-                    <div>
-                      <small>Faixa 01</small>
-                      <h4>Classe Farmacológica</h4>
+                <div className="pharma-audio-grid">
+                  <article className="pharma-audio-card">
+                    <span className="pharma-kicker">Revisão direcionada</span>
+                    <div className="pharma-track-title">
+                      <div>
+                        <small>Faixa 01</small>
+                        <h4>Classe Farmacológica</h4>
+                      </div>
+                      <span className="audio-icon">♪</span>
                     </div>
-                    <span className="audio-icon">♪</span>
-                  </div>
-                  <p>Uma amostra musical para reforçar conceitos de Farmacologia durante a rotina.</p>
-                  <audio controls preload="none" aria-label="Ouvir Classe Farmacológica">
-                    <source src="/media/classe-farmacologica.mp3" type="audio/mpeg" />
-                  </audio>
-                </article>
+                    <p>Uma amostra musical para reforçar conceitos de Farmacologia durante a rotina.</p>
+                    <audio controls preload="none" aria-label="Ouvir Classe Farmacológica">
+                      <source src="/media/classe-farmacologica.mp3" type="audio/mpeg" />
+                    </audio>
+                  </article>
+                  <article className="pharma-audio-card">
+                    <span className="pharma-kicker">Revisão direcionada</span>
+                    <div className="pharma-track-title">
+                      <div>
+                        <small>Faixa 02</small>
+                        <h4>Mecanismo de Ação</h4>
+                      </div>
+                      <span className="audio-icon">♪</span>
+                    </div>
+                    <p>Reforce como os medicamentos produzem seus efeitos no organismo.</p>
+                    <audio controls preload="none" aria-label="Ouvir Mecanismo de Ação">
+                      <source src="/media/mecanismo-de-acao.mp3" type="audio/mpeg" />
+                    </audio>
+                  </article>
+                </div>
                 <ul>
                   <li>Fundamentos de Farmacologia</li>
                   <li>Vias de administração</li>
