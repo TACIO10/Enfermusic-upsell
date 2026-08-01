@@ -255,15 +255,16 @@ footer { padding: 45px 0; background: #051f23; color: #aec2bd; }
 
 @media (max-width: 620px) {
   .wrap { width: min(100% - 26px, 1160px); }
-  .nav { height: 76px; }
+  .nav { display: none; }
   .nav-link { display: none; }
   .hero { min-height: auto; }
-  .hero-grid { gap: 44px; padding-bottom: 70px; }
-  h1 { font-size: 43px; }
-  h2 { font-size: 36px; }
-  .lead { font-size: 17px; }
+  .hero-grid { gap: 28px; padding: 28px 0 48px; }
+  h1 { margin-bottom: 18px; font-size: 34px; line-height: 1.04; }
+  h2 { font-size: 34px; }
+  .lead { margin-bottom: 24px; font-size: 16px; line-height: 1.55; }
   .hero-actions { display: grid; }
   .hero-proof { display: grid; gap: 7px; }
+  .hero-visual { max-width: 410px; }
   .floating-card { left: 0; }
   .memory-test { grid-template-columns: 1fr; padding: 24px; }
   .divider-arrow { transform: rotate(90deg); }
