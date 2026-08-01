@@ -13,13 +13,13 @@ export default function Home() {
         </div>
 
         <div className="upsell-actions">
-          <div
+          <a
             className="button-default button-accept w-full"
             style={{ padding: "17px 32px", lineHeight: "22px", borderRadius: "12px", fontWeight: 700, backgroundColor: "rgb(52, 226, 60)", color: "rgb(0, 0, 0)" }}
-            id="llupsell-C84A6065C-1"
+            href="https://lastlink.com/p/C84A6065C?cp=PrimeiroMes"
           >
             Quero comprar agora!
-          </div>
+          </a>
           <div
             className="button-default button-deny w-full"
             style={{ textDecoration: "underline", lineHeight: "22px", fontSize: "16px", fontWeight: 700, color: "rgb(0, 0, 0)" }}
@@ -29,9 +29,7 @@ export default function Home() {
           </div>
         </div>
 
-        <script src="https://cdn.lastlink.com/upsell.min.js" />
         <script dangerouslySetInnerHTML={{ __html: `
-          var upsellRedirect = "https://lastlink.com/app/member/dashboardV2";
           function setupDenyButtons() {
             document.querySelectorAll('[id^="denyButton"]').forEach(function(button) {
               button.onclick = function() {

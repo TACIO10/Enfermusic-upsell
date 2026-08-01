@@ -14,12 +14,10 @@
       <section class="vsl-shell" aria-labelledby="page-title">
         <h1 id="page-title"><span>ESPERE! SUA COMPRA AINDA NÃO</span><span>ESTÁ COMPLETA...</span></h1>
         <div class="video-frame" aria-label="Espaço reservado para o vídeo"><div class="video-placeholder"></div><div class="video-progress"></div></div>
-        <div style="font-family: DM Sans; display: flex; flex-direction: column; gap: 24px; align-items: center; cursor: pointer;" class="upsell-actions"><div class="button-default button-accept w-full" style="padding: 17px 32px; line-height: 22px; border-radius: 12px; font-weight: 700 !important; background-color: rgb(52, 226, 60); color: rgb(0, 0, 0);" id="llupsell-C84A6065C-1"> Quero comprar agora! </div><div class="button-default button-deny w-full" style="text-decoration: underline; line-height: 22px; font-size: 16px; font-weight: 700 !important; color: rgb(0, 0, 0);" id="denyButton4deaf72"> Não, Obrigado </div></div>
+        <div style="font-family: DM Sans; display: flex; flex-direction: column; gap: 24px; align-items: center; cursor: pointer;" class="upsell-actions"><a class="button-default button-accept w-full" style="padding: 17px 32px; line-height: 22px; border-radius: 12px; font-weight: 700 !important; background-color: rgb(52, 226, 60); color: rgb(0, 0, 0); text-decoration: none;" href="https://lastlink.com/p/C84A6065C?cp=PrimeiroMes"> Quero comprar agora! </a><div class="button-default button-deny w-full" style="text-decoration: underline; line-height: 22px; font-size: 16px; font-weight: 700 !important; color: rgb(0, 0, 0);" id="denyButton4deaf72"> Não, Obrigado </div></div>
       </section>
     </main>
-    <script src="https://cdn.lastlink.com/upsell.min.js"></script>
     <script>
-      var upsellRedirect = "https://lastlink.com/app/member/dashboardV2";
       function setupDenyButtons() {
         document.querySelectorAll('[id^="denyButton"]').forEach(button => {
           button.onclick = function() {
