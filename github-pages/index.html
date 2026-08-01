@@ -6,6 +6,7 @@
   <title>Espere! Sua compra ainda não está completa</title>
   <meta name="description" content="Escolha seu plano para completar a compra.">
   <link rel="stylesheet" href="styles.css">
+  <style>.delayed-offer{display:none}</style>
 </head>
 <body>
   <main class="page">
@@ -24,13 +25,13 @@
         document.head.appendChild(s);
       </script>
 
-      <div class="offers-heading">
+      <div class="offers-heading delayed-offer">
         <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
         <h2>Qual opção combina mais com você?</h2>
         <p>As duas opções liberam o acesso imediatamente após a confirmação do pagamento.</p>
       </div>
 
-      <div class="offer-stack">
+      <div class="offer-stack delayed-offer">
         <article class="price-card featured">
           <div class="card-copy">
             <span class="plan-eyebrow">COMECE AGORA</span><h3>Plano Mensal</h3>
@@ -60,10 +61,18 @@
         </article>
       </div>
 
-      <button class="deny-button" id="denyButton4deaf72">Não, obrigado. Quero continuar sem esta oferta.</button>
+      <button class="deny-button delayed-offer" id="denyButton4deaf72">Não, obrigado. Quero continuar sem esta oferta.</button>
     </section>
   </main>
   <script>
+    document.addEventListener('player:ready',function(event){
+      var detail=event.detail||{};
+      var config=detail.config||{};
+      var player=detail.player||document.querySelector('vturb-smartplayer');
+      var playerId=config.id||(player&&player.id?player.id.replace(/^vid-/,''):'');
+      if(playerId!=='6a6dfdfda5d5ced98d475173'||!player||typeof player.displayHiddenElements!=='function') return;
+      player.displayHiddenElements(222,['.delayed-offer'],{persist:false});
+    });
     function setupDenyButtons(){
       document.querySelectorAll('[id^="denyButton"]').forEach(function(button){
         button.onclick=function(){
