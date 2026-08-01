@@ -76,7 +76,9 @@ export default function Home() {
           <div className="hero-copy">
             <span className="eyebrow light">Para concursos de enfermagem</span>
             <h1>
-              Faça a matéria <em>voltar à memória</em> quando a questão aparecer.
+              Aprenda a memorizar os assuntos mais cobrados dos concursos de
+              Enfermagem em apenas <em>20 minutos por dia</em>, sem depender apenas
+              de PDFs e videoaulas.
             </h1>
             <p className="lead">
               Reforce os assuntos mais cobrados com músicas criadas para acompanhar
