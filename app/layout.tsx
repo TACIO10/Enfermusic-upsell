@@ -2,16 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Playlist para Treinar o Ouvido | Oferta Especial",
-  description: "Acelere sua percepção musical com uma playlist selecionada para treinar ouvido absoluto e relativo.",
-  openGraph: {
-    title: "Playlist para Treinar o Ouvido",
-    description: "Ouvido absoluto e relativo — oferta especial para alunos do Loop Auditivo.",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
-    locale: "pt_BR",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image", title: "Playlist para Treinar o Ouvido", description: "Ouvido absoluto e relativo.", images: ["/og.png"] },
+  title: "Espere! Sua compra ainda não está completa",
+  description: "Assista ao recado antes de concluir sua compra.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
