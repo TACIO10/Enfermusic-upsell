@@ -1,558 +1,145 @@
-const essentialCheckout =
-  "https://lastlink.com/p/CCE28D64F/checkout-payment/?utm_source=organic";
-const completeCheckout =
-  "https://lastlink.com/p/CAA8A573E/checkout-payment/?utm_source=organic";
+const acceptUrl = "#adicionar-ao-pedido";
+const declineUrl = "#continuar-sem-oferta";
 
-const subjects = [
-  "Sistema Único de Saúde (SUS)",
-  "Ética em Enfermagem",
-  "Saúde Coletiva",
-  "Farmacologia",
-  "Urgência e Emergência",
-  "Biossegurança",
-  "Saúde da Mulher",
-  "Saúde da Criança",
-  "Processo de Enfermagem",
-  "Administração de Medicamentos",
-  "Legislação em Enfermagem",
-  "Outros temas dos principais editais",
+const benefits = [
+  ["01", "Treine com músicas reais", "Saia dos exercícios isolados e reconheça acordes, intervalos e progressões dentro de músicas agradáveis."],
+  ["02", "Fortaleça a memória auditiva", "Crie referências sonoras mais claras e perceba detalhes musicais que antes passavam despercebidos."],
+  ["03", "Pratique sem parar sua rotina", "Transforme momentos no trabalho, na caminhada, no trânsito ou no descanso em treino auditivo."],
 ];
 
-const audios = [
-  {
-    number: "01",
-    title: "Atenção Primária",
-    description: "Fundamentos da Atenção Primária transformados em revisão musical.",
-    src: "/media/atencao-primaria.mp3",
-  },
-  {
-    number: "02",
-    title: "Os Três Pilares da Saúde",
-    description: "Conceitos essenciais reforçados de uma forma mais leve.",
-    src: "/media/tres-pilares-saude.mp3",
-  },
-  {
-    number: "03",
-    title: "SUS em Ação",
-    description: "Uma amostra musical sobre o Sistema Único de Saúde.",
-    src: "/media/sus-em-acao.mp3",
-  },
-];
-
-const bonuses = [
-  {
-    number: "01",
-    title: "Checklist dos assuntos mais cobrados",
-    text: "Saiba o que priorizar e acompanhe sua evolução pelos temas com maior incidência.",
-    image: "/media/bonus-checklist.webp",
-  },
-  {
-    number: "02",
-    title: "Banco de questões comentadas",
-    text: "Pratique após cada revisão com questões organizadas por disciplina.",
-    image: "/media/bonus-questoes.webp",
-  },
-  {
-    number: "03",
-    title: "Comunidade exclusiva de alunos",
-    text: "Troque experiências, tire dúvidas e acompanhe as novidades do método.",
-    image: "/media/bonus-comunidade.webp",
-  },
+const included = [
+  "Seleção estratégica de músicas com progressões claras",
+  "Referências para ouvido absoluto e relativo",
+  "Aplicação prática do treinamento do Loop Auditivo",
+  "Acesso imediato e pagamento único",
 ];
 
 export default function Home() {
   return (
     <main>
-      <section className="hero" id="inicio">
-        <nav className="nav wrap">
-          <a className="brand" href="#inicio" aria-label="Memória Musical — início">
-            <span className="brand-mark">♪</span>
-            <span>MEMÓRIA MUSICAL</span>
-          </a>
-          <a className="nav-link" href="#oferta">Ver planos</a>
-        </nav>
+      <div className="alert-bar">
+        <span className="pulse" />
+        <strong>Atenção:</strong> sua compra ainda não está 100% concluída
+      </div>
 
-        <div className="hero-grid wrap">
+      <section className="hero">
+        <div className="noise" />
+        <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow light">Para concursos de enfermagem</span>
-            <h1>
-              Aprenda a memorizar os assuntos mais cobrados dos concursos de
-              Enfermagem em apenas <em>20 minutos por dia</em>, sem depender apenas
-              de PDFs e videoaulas.
-            </h1>
+            <div className="brand"><span>♪</span> LOOP AUDITIVO</div>
+            <p className="hello">Hey, aqui é a Helena novamente.</p>
+            <h1>Leve seu ouvido musical <em>para o mundo real.</em></h1>
             <p className="lead">
-              Reforce os assuntos mais cobrados com músicas criadas para acompanhar
-              seus plantões, deslocamentos e os poucos minutos livres do dia.
+              Combine o Loop Auditivo com uma seleção estratégica de músicas e acelere sua capacidade de reconhecer acordes, intervalos e progressões harmônicas.
             </p>
-            <div className="hero-actions">
-              <a className="button primary" href="#experimente">
-                Ouvir uma amostra grátis <span>→</span>
-              </a>
-              <span className="microcopy">Sem cadastro · Dê o play agora</span>
-            </div>
-            <div className="hero-proof">
-              <span>✓ Acesso imediato</span>
-              <span>✓ Celular e computador</span>
-              <span>✓ Garantia de 30 dias</span>
-            </div>
+            <a className="cta hero-cta" href="#oferta">Quero acelerar minha evolução <span>↓</span></a>
+            <div className="micro-row"><span>✓ Acesso imediato</span><span>✓ Pagamento único</span><span>✓ Compra protegida</span></div>
           </div>
 
-          <div className="hero-visual">
-            <div className="visual-orbit orbit-one" />
-            <div className="visual-orbit orbit-two" />
-            <img
-              src="/media/oferta-memoria-musical.webp"
-              alt="Método da Memória Musical no celular com comunidade, questões e checklist"
-            />
-            <div className="floating-card">
-              <span className="sound-bars"><i /><i /><i /><i /><i /></span>
-              <div>
-                <small>Agora tocando</small>
-                <strong>Revisão de SUS</strong>
-              </div>
+          <div className="hero-art" aria-label="Representação visual de uma playlist para treinamento auditivo">
+            <div className="orbit orbit-a" /><div className="orbit orbit-b" />
+            <div className="headphones"><div className="headband" /><div className="ear left" /><div className="ear right" /></div>
+            <div className="playlist-card">
+              <span className="card-kicker">AGORA TOCANDO</span>
+              <div className="wave">{[18,32,48,25,56,38,68,44,24,52,34,62,29,45,20].map((h,i)=><i key={i} style={{height:h}} />)}</div>
+              <strong>Treino de percepção</strong>
+              <small>Progressões harmônicas claras</small>
+              <div className="progress"><span /></div>
+              <div className="controls">◀ <b>▶</b> ▶</div>
             </div>
+            <div className="note note-one">♪</div><div className="note note-two">♫</div>
           </div>
         </div>
       </section>
 
-      <section className="problem section">
+      <section className="story section">
         <div className="wrap narrow">
-          <span className="eyebrow">A frustração é conhecida</span>
-          <h2>Você estudou. Mas, na prova, a resposta simplesmente não veio.</h2>
-          <p className="section-intro">
-            PDFs longos e horas de videoaula podem ensinar o conteúdo. O problema
-            aparece depois: encontrar tempo e energia para reencontrar a matéria
-            vezes suficientes para ela permanecer acessível.
-          </p>
-          <div className="memory-test">
-            <div>
-              <span className="test-label">Complete mentalmente:</span>
-              <blockquote>“Parabéns pra…”</blockquote>
-              <strong>Fácil, não é?</strong>
-            </div>
-            <div className="divider-arrow">→</div>
-            <div>
-              <span className="test-label">Agora tente lembrar:</span>
-              <blockquote>O 5º tópico do último PDF</blockquote>
-              <strong>Percebe a diferença?</strong>
-            </div>
-          </div>
-          <p className="insight">
-            O problema não é falta de capacidade. <strong>É a forma como a revisão
-            cabe — ou não cabe — na sua rotina.</strong>
-          </p>
+          <span className="eyebrow">Uma pergunta começou a se repetir</span>
+          <blockquote>“Helena, existe alguma forma de acelerar ainda mais o desenvolvimento do ouvido?”</blockquote>
+          <p className="answer">Sim, existe.</p>
+          <p>Logo depois de começarem a utilizar o Loop Auditivo, muitos alunos perceberam a evolução e quiseram ir além: reconhecer os mesmos padrões não apenas durante o treino, mas também nas músicas que ouviam todos os dias.</p>
         </div>
       </section>
 
-      <section className="mechanism section dark">
-        <div className="wrap mechanism-grid">
+      <section className="imagine section dark">
+        <div className="wrap imagine-grid">
           <div>
-            <span className="eyebrow light">O mecanismo</span>
-            <h2>Você não precisa encontrar mais horas. Precisa reencontrar a matéria mais vezes.</h2>
+            <span className="eyebrow light">Agora imagine</span>
+            <h2>Ouvir uma música e finalmente perceber o que antes passava despercebido.</h2>
           </div>
-          <div className="mechanism-copy">
-            <p>
-              O Método da Memória Musical transforma conteúdos recorrentes dos
-              concursos de enfermagem em faixas organizadas por disciplina.
-            </p>
-            <p>
-              Assim, sua revisão pode continuar no trânsito, no intervalo do
-              plantão, caminhando ou cuidando da casa — sem substituir seu estudo
-              principal.
-            </p>
-          </div>
-          <div className="routine-strip">
-            {["Estude", "Dê o play", "Reencontre", "Reconheça"].map((item, index) => (
-              <div key={item}>
-                <span>0{index + 1}</span>
-                <strong>{item}</strong>
-              </div>
-            ))}
+          <div className="imagine-list">
+            {["Reconhecer acordes com mais facilidade", "Identificar intervalos e movimentos harmônicos", "Perceber padrões musicais com mais clareza", "Tocar com mais confiança"].map((item,i)=><div key={item}><span>0{i+1}</span><strong>{item}</strong></div>)}
           </div>
         </div>
       </section>
 
-      <section className="listen section" id="experimente">
-        <div className="wrap">
-          <div className="section-heading center listen-heading">
-            <span className="eyebrow">Experimente o método</span>
-            <h2>Escolha uma disciplina e dê o play.</h2>
-            <p>Conheça a experiência de revisar por músicas antes de escolher seu acesso.</p>
-          </div>
-
-          <div className="sample-library">
-            <section className="sample-collection">
-              <div className="collection-heading">
-                <div>
-                  <span className="collection-index">Disciplina 01</span>
-                  <h3>Saúde Pública e SUS</h3>
-                </div>
-                <span className="collection-count">3 amostras disponíveis</span>
-              </div>
-              <div className="audio-grid">
-                {audios.map((audio) => (
-                  <article className="audio-card" key={audio.title}>
-                    <div className="audio-top">
-                      <span>Faixa {audio.number}</span>
-                      <span className="audio-icon">♪</span>
-                    </div>
-                    <h4>{audio.title}</h4>
-                    <p>{audio.description}</p>
-                    <audio controls preload="none" aria-label={`Ouvir ${audio.title}`}>
-                      <source src={audio.src} type="audio/mpeg" />
-                    </audio>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="sample-collection pharma-collection">
-              <div className="collection-heading">
-                <div>
-                  <span className="collection-index">Disciplina 02</span>
-                  <h3>Farmacologia e Administração de Medicamentos</h3>
-                </div>
-                <span className="collection-count">2 amostras disponíveis</span>
-              </div>
-              <div className="pharma-content">
-                <div className="pharma-audio-grid">
-                  <article className="pharma-audio-card">
-                    <span className="pharma-kicker">Revisão direcionada</span>
-                    <div className="pharma-track-title">
-                      <div>
-                        <small>Faixa 01</small>
-                        <h4>Classe Farmacológica</h4>
-                      </div>
-                      <span className="audio-icon">♪</span>
-                    </div>
-                    <p>Uma amostra musical para reforçar conceitos de Farmacologia durante a rotina.</p>
-                    <audio controls preload="none" aria-label="Ouvir Classe Farmacológica">
-                      <source src="/media/classe-farmacologica.mp3" type="audio/mpeg" />
-                    </audio>
-                  </article>
-                  <article className="pharma-audio-card">
-                    <span className="pharma-kicker">Revisão direcionada</span>
-                    <div className="pharma-track-title">
-                      <div>
-                        <small>Faixa 02</small>
-                        <h4>Mecanismo de Ação</h4>
-                      </div>
-                      <span className="audio-icon">♪</span>
-                    </div>
-                    <p>Reforce como os medicamentos produzem seus efeitos no organismo.</p>
-                    <audio controls preload="none" aria-label="Ouvir Mecanismo de Ação">
-                      <source src="/media/mecanismo-de-acao.mp3" type="audio/mpeg" />
-                    </audio>
-                  </article>
-                </div>
-                <ul>
-                  <li>Fundamentos de Farmacologia</li>
-                  <li>Vias de administração</li>
-                  <li>Cálculo e diluição de medicamentos</li>
-                  <li>Segurança na administração</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section className="fit section">
-        <div className="wrap fit-grid">
-          <div className="fit-visual">
-            <img src="/media/fernanda-virada.webp" alt="Fones de ouvido sobre materiais de estudo" />
-            <div className="time-badge"><strong>20</strong><span>minutos<br />por dia</span></div>
+      <section className="solution section">
+        <div className="wrap solution-grid">
+          <div className="album-art">
+            <div className="album-top"><span>EDIÇÃO ESPECIAL</span><span>♪</span></div>
+            <div className="album-wave">{[36,68,44,82,52,92,61,75,40,66,30].map((h,i)=><i key={i} style={{height:h}} />)}</div>
+            <h3>Playlist de Músicas</h3>
+            <p>para treinar ouvido<br/>absoluto e relativo</p>
           </div>
           <div>
-            <span className="eyebrow">Feito para a rotina real</span>
-            <h2>Revise até quando você não está “sentada para estudar”.</h2>
-            <div className="use-list">
-              {[
-                ["No trânsito", "Transforme o deslocamento em revisão."],
-                ["No plantão", "Use uma pausa curta para reencontrar um tema."],
-                ["Nas tarefas", "Continue ouvindo enquanto cuida da rotina."],
-                ["Na caminhada", "Movimente o corpo sem abandonar o conteúdo."],
-              ].map(([title, text], index) => (
-                <div key={title}>
-                  <span>0{index + 1}</span>
-                  <p><strong>{title}</strong>{text}</p>
-                </div>
-              ))}
-            </div>
+            <span className="eyebrow">Não é uma playlist comum</span>
+            <h2>Uma ponte entre o treinamento e a música de verdade.</h2>
+            <p>Esta playlist foi cuidadosamente selecionada para ajudar seu cérebro a criar conexões auditivas mais rápidas, usando músicas com progressões harmônicas claras e fáceis de identificar.</p>
+            <p>Assim, você aplica o que aprende no Loop Auditivo em um contexto real, agradável e fácil de incluir na rotina.</p>
+            <div className="bridge"><span>LOOP AUDITIVO</span><i>→</i><span>MÚSICAS REAIS</span></div>
           </div>
         </div>
       </section>
 
-      <section className="contents section" id="conteudos">
+      <section className="benefits section soft">
         <div className="wrap">
-          <div className="section-heading center">
-            <span className="eyebrow">Dentro da plataforma</span>
-            <h2>Os temas que mais aparecem nos editais, prontos para acompanhar você.</h2>
-          </div>
-          <div className="subject-grid">
-            {subjects.map((subject, index) => (
-              <div key={subject}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{subject}</strong>
-              </div>
-            ))}
-          </div>
-          <div className="center-cta">
-            <a className="button dark-button" href="#oferta">Quero escolher meu acesso <span>↓</span></a>
-          </div>
+          <div className="section-heading"><span className="eyebrow">O que muda na prática</span><h2>Seu treino continua mesmo quando você não está “estudando”.</h2></div>
+          <div className="benefit-grid">{benefits.map(([n,t,d])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div>
+          <div className="routine"><span>NO TRABALHO</span><i>•</i><span>NA CAMINHADA</span><i>•</i><span>NO TRÂNSITO</span><i>•</i><span>NO DESCANSO</span></div>
         </div>
       </section>
 
-      <section className="comparison section dark">
-        <div className="wrap">
-          <div className="section-heading center light-heading">
-            <span className="eyebrow light">Menos atrito, mais frequência</span>
-            <h2>Qual revisão tem mais chance de caber no seu dia?</h2>
+      <section className="offer section dark" id="oferta">
+        <div className="wrap offer-grid">
+          <div className="offer-copy">
+            <span className="eyebrow light">Oferta exclusiva para novos alunos</span>
+            <h2>Complete seu treinamento da forma mais inteligente.</h2>
+            <p>Adicione agora a Playlist de Músicas para Treinar Ouvido Absoluto e Relativo ao seu pedido.</p>
+            <ul>{included.map(item=><li key={item}><span>✓</span>{item}</li>)}</ul>
           </div>
-          <div className="compare-grid">
-            <article className="compare-old">
-              <span className="compare-label">Revisão tradicional</span>
-              <h3>Depende de parar tudo.</h3>
-              <ul>
-                <li>× PDFs extensos para reler</li>
-                <li>× Mais tempo diante da tela</li>
-                <li>× Difícil manter todos os dias</li>
-                <li>× Revisões deixadas para depois</li>
-              </ul>
-            </article>
-            <article className="compare-new">
-              <span className="compare-label">Memória Musical</span>
-              <h3>Acompanha o que você já faz.</h3>
-              <ul>
-                <li>✓ Faixas rápidas por disciplina</li>
-                <li>✓ Ouça pelo celular</li>
-                <li>✓ Mais contato com os conteúdos</li>
-                <li>✓ Fácil de repetir na rotina</li>
-              </ul>
-            </article>
-          </div>
-          <p className="disclaimer-inline">
-            O método é complementar: não substitui aulas, leitura ou resolução de questões.
-          </p>
+          <article className="price-card">
+            <span className="exclusive">SOMENTE NESTA PÁGINA</span>
+            <p className="price-intro">De <s>R$ 97</s> por apenas</p>
+            <div className="price"><small>R$</small><strong>47</strong></div>
+            <p className="payment">pagamento único · sem mensalidades</p>
+            <a className="cta" href={acceptUrl} data-goatcounter-click="upsell-playlist-47">SIM, ADICIONAR AO MEU PEDIDO <span>→</span></a>
+            <div className="safe">🔒 Acesso imediato · Compra protegida</div>
+          </article>
         </div>
       </section>
 
-      <section className="bonuses section">
-        <div className="wrap">
-          <div className="section-heading split-heading">
-            <div>
-              <span className="eyebrow">No plano completo</span>
-              <h2>Três recursos para transformar revisão em preparação.</h2>
-            </div>
-            <p>Ouça, priorize o que estudar, pratique e mantenha o ritmo com outros alunos.</p>
-          </div>
-          <div className="bonus-grid">
-            {bonuses.map((bonus) => (
-              <article key={bonus.title}>
-                <img src={bonus.image} alt={`Capa: ${bonus.title}`} />
-                <div className="bonus-copy">
-                  <span>Bônus {bonus.number}</span>
-                  <h3>{bonus.title}</h3>
-                  <p>{bonus.text}</p>
-                  <strong>Incluído no Plano Completo</strong>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="testimonials section soft">
-        <div className="wrap">
-          <div className="section-heading center">
-            <span className="eyebrow">Experiência de alunas</span>
-            <h2>Veja os relatos de quem incluiu as músicas na rotina.</h2>
-          </div>
-          <div className="testimonial-grid">
-            {[
-              ["depoimento-juliana.webp", "Depoimento de Juliana Rocha"],
-              ["depoimento-camila.webp", "Depoimento de Camila Santos"],
-              ["depoimento-amanda.webp", "Depoimento de Amanda Ferreira"],
-            ].map(([image, alt]) => (
-              <figure key={image}><img src={`/media/${image}`} alt={alt} /></figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pricing section" id="oferta">
-        <div className="wrap">
-          <div className="section-heading center">
-            <span className="eyebrow">Escolha seu acesso</span>
-            <h2>Comece pelo essencial ou leve a preparação completa.</h2>
-            <p>Pagamento único e acesso liberado após a confirmação.</p>
-          </div>
-          <div className="price-grid">
-            <article className="price-card">
-              <span className="plan-tag">Plano Essencial</span>
-              <h3>Para começar a revisar com música</h3>
-              <div className="price"><small>R$</small><strong>19</strong><small>,90</small></div>
-              <p className="payment">pagamento único</p>
-              <ul>
-                <li>✓ Método da Memória Musical</li>
-                <li>✓ Trilhas com assuntos essenciais</li>
-                <li>✓ Acesso pelo celular e computador</li>
-                <li>✓ Acesso imediato</li>
-              </ul>
-              <a
-                className="button secondary"
-                href={essentialCheckout}
-                data-goatcounter-click="checkout-plano-essencial-19-90"
-                data-goatcounter-title="Clique no checkout — Plano Essencial R$ 19,90"
-                data-goatcounter-no-session="1"
-              >
-                Quero o Plano Essencial <span>→</span>
-              </a>
-            </article>
-
-            <article className="price-card featured">
-              <span className="popular">Melhor escolha</span>
-              <span className="plan-tag">Plano Completo</span>
-              <h3>Todo o método e todos os bônus</h3>
-              <div className="price"><small>R$</small><strong>29</strong><small>,90</small></div>
-              <p className="payment">pagamento único</p>
-              <p className="installments">ou 5x de R$ 6,63</p>
-              <ul>
-                <li>✓ Biblioteca completa de músicas</li>
-                <li>✓ Checklist dos assuntos mais cobrados</li>
-                <li>✓ Banco de questões comentadas</li>
-                <li>✓ Comunidade exclusiva</li>
-                <li>✓ Novas músicas e atualizações</li>
-                <li>✓ Suporte</li>
-              </ul>
-              <a
-                className="button primary"
-                href={completeCheckout}
-                data-goatcounter-click="checkout-plano-completo-29-90"
-                data-goatcounter-title="Clique no checkout — Plano Completo R$ 29,90"
-                data-goatcounter-no-session="1"
-              >
-                Quero acesso completo <span>→</span>
-              </a>
-            </article>
-          </div>
-          <p className="secure-note">🔒 Compra segura · Liberação imediata · Garantia de 30 dias</p>
-        </div>
-      </section>
-
-      <section className="guarantee section dark">
+      <section className="guarantee section">
         <div className="wrap guarantee-grid">
-          <div className="guarantee-seal"><strong>30</strong><span>DIAS</span></div>
-          <div>
-            <span className="eyebrow light">Risco reduzido</span>
-            <h2>Ouça, explore e veja se o método cabe na sua rotina.</h2>
-            <p>
-              Você tem 30 dias para experimentar. Se perceber que o Método da
-              Memória Musical não faz sentido para você, basta solicitar o reembolso.
-            </p>
-            <strong>O risco fica do nosso lado.</strong>
-          </div>
+          <div className="seal"><span>✓</span><strong>RISCO<br/>ZERO</strong></div>
+          <div><span className="eyebrow">Sua escolha continua protegida</span><h2>Experimente e avalie por conta própria.</h2><p>A playlist conta com a mesma garantia da sua compra. Você pode acessar o material, experimentar e decidir com tranquilidade se ele faz sentido para o seu desenvolvimento musical.</p></div>
         </div>
       </section>
 
-      <section className="faq section">
-        <div className="wrap narrow">
-          <div className="section-heading">
-            <span className="eyebrow">Perguntas frequentes</span>
-            <h2>Antes de dar o play, tire suas dúvidas.</h2>
-          </div>
-          <div className="faq-list">
-            {[
-              [
-                "1. O que é o Método da Memória Musical®?",
-                "O Método da Memória Musical® é uma forma diferente de complementar seus estudos para concursos de Enfermagem. Em vez de depender apenas de PDFs e videoaulas, você também revisa os conteúdos por meio de músicas criadas com base nos principais assuntos cobrados nos editais.",
-              ],
-              [
-                "2. O Método da Memória Musical® substitui PDFs, videoaulas ou cursos?",
-                "Não.\n\nEle foi desenvolvido para complementar sua preparação. Você continua estudando pelos materiais tradicionais e utiliza as músicas para reforçar e revisar os conteúdos de forma prática durante a rotina.",
-              ],
-              [
-                "3. Como estudar ouvindo música pode ajudar?",
-                "As músicas permitem que você mantenha contato frequente com os conteúdos já estudados, aproveitando momentos em que normalmente não estaria revisando, como no carro, caminhando, fazendo tarefas de casa ou nos intervalos do trabalho.",
-              ],
-              [
-                "4. Funciona mesmo para quem trabalha em plantão?",
-                "Sim.\n\nO método foi pensado justamente para quem tem pouco tempo disponível. Como as músicas podem ser ouvidas em diferentes momentos do dia, fica mais fácil incluir revisões na rotina sem precisar passar horas extras sentado estudando.",
-              ],
-              [
-                "5. Nunca consegui decorar nada com música. Mesmo assim vale a pena?",
-                "Sim.\n\nVocê não precisa cantar nem ter facilidade musical. As músicas funcionam como uma ferramenta complementar de revisão. Muitas pessoas percebem que a combinação entre ritmo e repetição torna o contato com o conteúdo mais frequente e agradável.",
-              ],
-              [
-                "6. As músicas são baseadas no edital?",
-                "Sim.\n\nOs conteúdos são produzidos com foco nos assuntos mais recorrentes dos concursos de Enfermagem, ajudando você a revisar temas que costumam aparecer nas provas.",
-              ],
-              [
-                "7. Para quais concursos o método serve?",
-                "O Método da Memória Musical® foi desenvolvido para concursos da área da Enfermagem. Como cada edital possui suas particularidades, ele deve ser utilizado como complemento à preparação específica para o concurso que você pretende prestar.",
-              ],
-              [
-                "8. Sou iniciante. Esse método é para mim?",
-                "Sim.\n\nSe você está começando agora, as músicas ajudam a reforçar o conteúdo desde o início dos estudos. E, se já estuda há algum tempo, elas podem complementar sua rotina de revisões.",
-              ],
-              [
-                "9. Tenho pouco tempo para estudar. Ainda vale a pena?",
-                "Sim.\n\nUma das maiores vantagens do método é justamente permitir que você aproveite momentos do dia que normalmente seriam improdutivos para reforçar os conteúdos já estudados.",
-              ],
-              [
-                "10. Posso acessar pelo celular?",
-                "Sim.\n\nVocê poderá acessar a plataforma pelo celular, tablet ou computador, estudando de onde estiver.",
-              ],
-              [
-                "11. O acesso é imediato?",
-                "Sim.\n\nApós a confirmação do pagamento, seu acesso é liberado e você já pode começar a utilizar a plataforma.",
-              ],
-              [
-                "12. Vou receber atualizações?",
-                "Sempre que novos conteúdos forem adicionados dentro do período de acesso do seu plano, eles ficarão disponíveis na plataforma conforme as condições da oferta.",
-              ],
-              [
-                "13. E se eu não gostar?",
-                "Você conta com uma garantia de 7 dias.\n\nAssim, poderá conhecer a plataforma e decidir com tranquilidade se o Método da Memória Musical® faz sentido para a sua preparação.",
-              ],
-              [
-                "14. Preciso estudar todos os dias ouvindo música?",
-                "Não.\n\nAs músicas são uma ferramenta para complementar suas revisões. Você pode utilizá-las nos momentos que fizerem sentido para a sua rotina de estudos.",
-              ],
-              [
-                "15. Em quanto tempo vou perceber resultados?",
-                "Cada pessoa possui uma rotina e um ritmo de aprendizado diferentes.\n\nO Método da Memória Musical® foi criado para facilitar suas revisões e complementar sua preparação, mas o desempenho em concursos depende de diversos fatores, como constância, planejamento e dedicação aos estudos.",
-              ],
-              [
-                "16. Como começo depois da compra?",
-                "É simples.\n\n1. Finalize sua compra.\n2. Receba o acesso imediatamente.\n3. Entre na plataforma.\n4. Escolha a playlist do assunto que deseja revisar.\n5. Comece a estudar utilizando o Método da Memória Musical®.",
-              ],
-            ].map(([question, answer]) => (
-              <details key={question}>
-                <summary>{question}<span>+</span></summary>
-                <p>{answer}</p>
-              </details>
-            ))}
-          </div>
+      <section className="urgency">
+        <div className="wrap urgency-inner"><span className="clock">!</span><div><strong>Esta condição está disponível apenas agora.</strong><p>Ao sair desta página, a oferta será encerrada e não poderá ser acessada novamente por este valor.</p></div></div>
+      </section>
+
+      <section className="final section dark">
+        <div className="wrap narrow center">
+          <span className="eyebrow light">Seu próximo acorde começa aqui</span>
+          <h2>Transforme cada música em uma oportunidade de evoluir.</h2>
+          <p>Adicione a playlist ao seu pedido e una treinamento direcionado com aplicação prática.</p>
+          <a className="cta final-cta" href={acceptUrl}>SIM, QUERO A PLAYLIST POR R$ 47 <span>→</span></a>
+          <a className="decline" href={declineUrl}>Não desejo essa oferta. Quero continuar apenas com o Loop Auditivo.</a>
         </div>
       </section>
 
-      <section className="final-cta">
-        <div className="wrap narrow">
-          <span className="eyebrow light">Sua próxima revisão pode começar agora</span>
-          <h2>Deixe a matéria acompanhar você — e não o contrário.</h2>
-          <p>Escolha o plano que combina com sua preparação e receba o acesso imediatamente.</p>
-          <a className="button primary" href="#oferta">Quero começar agora <span>↑</span></a>
-        </div>
-      </section>
-
-      <footer>
-        <div className="wrap footer-inner">
-          <a className="brand" href="#inicio"><span className="brand-mark">♪</span><span>MEMÓRIA MUSICAL</span></a>
-          <p>© 2026 Método da Memória Musical. Todos os direitos reservados.</p>
-          <p className="legal">Este produto é um recurso complementar de revisão e não garante aprovação. Resultados variam conforme dedicação, rotina de estudos e outros fatores individuais.</p>
-        </div>
-      </footer>
+      <footer><div className="wrap"><div className="brand"><span>♪</span> LOOP AUDITIVO</div><p>© 2026 · Todos os direitos reservados.</p></div></footer>
     </main>
   );
 }
