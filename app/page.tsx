@@ -1,28 +1,23 @@
 const plans = [
   {
-    name: "Plano Mensal",
-    eyebrow: "COMECE AGORA",
-    description: "Ideal para começar com o menor investimento e experimentar todo o conteúdo.",
-    price: "5",
-    suffix: "no primeiro mês",
-    note: "Depois, a renovação segue pelo valor mensal da oferta.",
-    benefits: ["Acesso imediato ao conteúdo", "Cancele quando quiser", "Atualizações durante a assinatura"],
-    href: "https://lastlink.com/p/C84A6065C?cp=PrimeiroMes",
-    cta: "QUERO COMEÇAR POR R$ 5",
+    name: "Acesso Completo",
+    eyebrow: "CONDIÇÃO ESPECIAL",
+    description: "Todo o Método da Memória Musical e os três bônus reunidos em um único acesso.",
+    price: "67",
+    suffix: "pagamento único",
+    note: "Sem mensalidade e sem cobranças recorrentes.",
+    benefits: ["Método da Memória Musical®", "Checklist dos assuntos mais cobrados", "Banco de questões", "Comunidade exclusiva"],
+    href: "https://lastlink.com/p/CF036AAF0/",
+    cta: "QUERO ACESSO COMPLETO POR R$ 67",
     featured: true,
   },
-  {
-    name: "Acesso Vitalício",
-    eyebrow: "MELHOR CUSTO-BENEFÍCIO",
-    description: "Faça um único pagamento e mantenha seu acesso para sempre, sem mensalidades.",
-    price: "197",
-    suffix: "pagamento único",
-    note: "Sem renovação e sem cobranças recorrentes.",
-    benefits: ["Acesso vitalício ao conteúdo", "Pagamento único", "Todas as futuras atualizações"],
-    href: "https://lastlink.com/p/CF036AAF0/",
-    cta: "QUERO ACESSO VITALÍCIO",
-    featured: false,
-  },
+];
+
+const packageItems = [
+  ["♪", "Método da Memória Musical®", "R$ 197"],
+  ["✓", "Checklist", "R$ 27"],
+  ["Q", "Banco de Questões", "R$ 37"],
+  ["+", "Comunidade Exclusiva", "R$ 37"],
 ];
 
 export default function Home() {
@@ -38,10 +33,32 @@ export default function Home() {
         <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6a6dfdfda5d5ced98d475173/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
 
         <div className="offers-heading delayed-offer">
-          <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
-          <h2>Qual opção combina mais com você?</h2>
-          <p>As duas opções liberam o acesso imediatamente após a confirmação do pagamento.</p>
+          <span>OFERTA ESPECIAL</span>
+          <h2>Leve o método completo com todos os bônus.</h2>
+          <p>Veja tudo o que está incluído no seu acesso.</p>
         </div>
+
+        <section className="value-stack delayed-offer" aria-label="Valor total do pacote">
+          <div className="value-stack-heading">
+            <span>VALOR TOTAL DO PACOTE</span>
+            <strong>Mais preparação em uma única oferta</strong>
+          </div>
+          <div className="value-items">
+            {packageItems.map(([icon, item, value]) => (
+              <div className="value-item" key={item}>
+                <span className="value-icon">{icon}</span>
+                <strong>{item}</strong>
+                <span className="value-price">{value}</span>
+              </div>
+            ))}
+          </div>
+          <div className="value-total">
+            <span>De <s>R$ 298</s></span>
+            <p>Mas hoje você não paga R$ 298.</p>
+            <p>Nem R$ 197.</p>
+            <strong>Seu acesso completo sai por apenas:</strong>
+          </div>
+        </section>
 
         <div className="offer-stack delayed-offer">
           {plans.map((plan) => (
