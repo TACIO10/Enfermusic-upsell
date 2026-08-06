@@ -4,3 +4,10 @@
 @media(max-width:760px){.page{padding-bottom:0}.vsl-shell{min-height:100vh;padding:42px 16px 58px;border-radius:0}h1{margin-bottom:44px;font-size:clamp(27px,8.2vw,42px);line-height:.98}h1 span{display:inline;padding:3px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.video-frame{border-radius:9px}.video-progress{height:7px}.offers-heading{margin-top:45px}.offers-heading p{font-size:14px}.price-card{grid-template-columns:1fr;gap:26px;padding:29px 22px}.price-card.featured::before{right:15px}.card-copy{text-align:center}.card-copy h3{font-size:28px}.card-copy ul{width:max-content;max-width:100%;margin:21px auto 0;text-align:left}.card-offer{padding:25px 0 0;border-top:1px solid #29414b;border-left:0}.price-note{min-height:auto}.buy-button{min-height:58px;font-size:12px}.deny-button{font-size:11px}}
 
 .video-frame{aspect-ratio:auto;background:#000}.video-frame vturb-smartplayer{display:block;width:100%}
+.price-card.semestral{border-color:#6651a0;background:linear-gradient(145deg,#151d31,#0b1722)}
+.price-card.semestral .plan-eyebrow,.price-card.semestral .card-copy li span{color:#b8a7ff}
+.price-card.semestral .buy-button{background:#9e87f7;color:#100d1d;box-shadow:0 8px 24px rgba(158,135,247,.22)}
+.price-card.annual{border-color:#e8bd3e;background:linear-gradient(145deg,#2b2615,#111b20);box-shadow:0 0 0 1px rgba(255,214,90,.18),0 20px 50px rgba(0,0,0,.3)}
+.price-card.annual::before{content:"MAIS ESCOLHIDO";background:#ffd65a}
+.price-card.annual .plan-eyebrow,.price-card.annual .card-copy li span{color:#ffd65a}
+.price-card.annual .buy-button{background:#ffd65a;color:#1c1605;box-shadow:0 8px 24px rgba(255,214,90,.22)}

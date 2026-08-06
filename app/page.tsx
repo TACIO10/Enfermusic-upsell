@@ -1,27 +1,39 @@
 const plans = [
   {
-    name: "Plano Mensal",
-    eyebrow: "COMECE AGORA",
-    description: "Ideal para começar com o menor investimento e experimentar todo o conteúdo.",
-    price: "5",
-    suffix: "no primeiro mês",
-    note: "Depois, a renovação segue pelo valor mensal da oferta.",
-    benefits: ["Acesso imediato ao conteúdo", "Cancele quando quiser", "Atualizações durante a assinatura"],
-    href: "https://lastlink.com/p/C84A6065C?cp=PrimeiroMes",
-    cta: "QUERO COMEÇAR POR R$ 5",
-    featured: true,
+    name: "📅 Plano Mensal",
+    eyebrow: "FLEXIBILIDADE TOTAL",
+    description: "Acesso completo ao App de Simulados com cobrança mensal.",
+    price: "47",
+    suffix: "por mês",
+    note: "Assine mês a mês e cancele quando quiser.",
+    benefits: ["Acesso completo ao App de Simulados", "Cobrança mensal", "Cancele quando quiser"],
+    href: "https://lastlink.com/p/CF626C39E/checkout-payment/",
+    cta: "QUERO O PLANO MENSAL",
+    style: "monthly",
   },
   {
-    name: "Acesso Vitalício",
+    name: "🔥 Plano Semestral",
+    eyebrow: "ECONOMIA INTELIGENTE",
+    description: "Seis meses completos de acesso por um valor muito menor que o plano mensal.",
+    price: "147",
+    suffix: "por 6 meses",
+    note: "Equivale a apenas R$ 24,50 por mês.",
+    benefits: ["Acesso completo ao App de Simulados", "Economize R$ 135", "Seis meses de preparação"],
+    href: "https://lastlink.com/p/C367A5A78/checkout-payment/",
+    cta: "QUERO O PLANO SEMESTRAL",
+    style: "semestral",
+  },
+  {
+    name: "👑 Plano Anual",
     eyebrow: "MELHOR CUSTO-BENEFÍCIO",
-    description: "Faça um único pagamento e mantenha seu acesso para sempre, sem mensalidades.",
+    description: "O plano escolhido por quem pretende estudar até a aprovação.",
     price: "197",
-    suffix: "pagamento único",
-    note: "Sem renovação e sem cobranças recorrentes.",
-    benefits: ["Acesso vitalício ao conteúdo", "Pagamento único", "Todas as futuras atualizações"],
-    href: "https://lastlink.com/p/CF036AAF0/",
-    cta: "QUERO ACESSO VITALÍCIO",
-    featured: false,
+    suffix: "por 12 meses",
+    note: "Equivale a apenas R$ 16,42 por mês.",
+    benefits: ["Acesso completo ao App de Simulados", "Economize R$ 367", "Um ano inteiro de preparação"],
+    href: "https://lastlink.com/p/CE98B3216/checkout-payment/",
+    cta: "QUERO O PLANO ANUAL",
+    style: "annual featured",
   },
 ];
 
@@ -40,12 +52,12 @@ export default function Home() {
         <div className="offers-heading">
           <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
           <h2>Qual opção combina mais com você?</h2>
-          <p>As duas opções liberam o acesso imediatamente após a confirmação do pagamento.</p>
+          <p>Todos os planos liberam o acesso imediatamente após a confirmação do pagamento.</p>
         </div>
 
         <div className="offer-stack">
           {plans.map((plan) => (
-            <article className={`price-card ${plan.featured ? "featured" : "lifetime"}`} key={plan.name}>
+            <article className={`price-card ${plan.style}`} key={plan.name}>
               <div className="card-copy">
                 <span className="plan-eyebrow">{plan.eyebrow}</span>
                 <h3>{plan.name}</h3>

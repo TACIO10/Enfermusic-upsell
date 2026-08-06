@@ -6,6 +6,15 @@
   <title>Espere! Sua compra ainda não está completa</title>
   <meta name="description" content="Escolha seu plano para completar a compra.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .price-card.semestral{border-color:#6651a0;background:linear-gradient(145deg,#151d31,#0b1722)}
+    .price-card.semestral .plan-eyebrow,.price-card.semestral .card-copy li span{color:#b8a7ff}
+    .price-card.semestral .buy-button{background:#9e87f7;color:#100d1d;box-shadow:0 8px 24px rgba(158,135,247,.22)}
+    .price-card.annual{border-color:#e8bd3e;background:linear-gradient(145deg,#2b2615,#111b20);box-shadow:0 0 0 1px rgba(255,214,90,.18),0 20px 50px rgba(0,0,0,.3)}
+    .price-card.annual:before{content:"MAIS ESCOLHIDO";background:#ffd65a}
+    .price-card.annual .plan-eyebrow,.price-card.annual .card-copy li span{color:#ffd65a}
+    .price-card.annual .buy-button{background:#ffd65a;color:#1c1605;box-shadow:0 8px 24px rgba(255,214,90,.22)}
+  </style>
 </head>
 <body>
   <main class="page">
@@ -27,34 +36,48 @@
       <div class="offers-heading">
         <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
         <h2>Qual opção combina mais com você?</h2>
-        <p>As duas opções liberam o acesso imediatamente após a confirmação do pagamento.</p>
+        <p>Todos os planos liberam o acesso imediatamente após a confirmação do pagamento.</p>
       </div>
 
       <div class="offer-stack">
-        <article class="price-card featured">
+        <article class="price-card monthly">
           <div class="card-copy">
-            <span class="plan-eyebrow">COMECE AGORA</span><h3>Plano Mensal</h3>
-            <p class="plan-description">Ideal para começar com o menor investimento e experimentar todo o conteúdo.</p>
-            <ul><li><span>✓</span>Acesso imediato ao conteúdo</li><li><span>✓</span>Cancele quando quiser</li><li><span>✓</span>Atualizações durante a assinatura</li></ul>
+            <span class="plan-eyebrow">FLEXIBILIDADE TOTAL</span><h3>📅 Plano Mensal</h3>
+            <p class="plan-description">Acesso completo ao App de Simulados com cobrança mensal.</p>
+            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Cobrança mensal</li><li><span>✓</span>Cancele quando quiser</li></ul>
           </div>
           <div class="card-offer">
-            <div class="price"><small>R$</small><strong>5</strong></div><span class="price-suffix">no primeiro mês</span>
-            <p class="price-note">Depois, a renovação segue pelo valor mensal da oferta.</p>
-            <a class="buy-button" href="https://lastlink.com/p/C84A6065C?cp=PrimeiroMes">QUERO COMEÇAR POR R$ 5 <span>→</span></a>
+            <div class="price"><small>R$</small><strong>47</strong></div><span class="price-suffix">por mês</span>
+            <p class="price-note">Assine mês a mês e cancele quando quiser.</p>
+            <a class="buy-button" href="https://lastlink.com/p/CF626C39E/checkout-payment/">QUERO O PLANO MENSAL <span>→</span></a>
             <small class="secure">🔒 Compra segura · Acesso imediato</small>
           </div>
         </article>
 
-        <article class="price-card lifetime">
+        <article class="price-card semestral">
           <div class="card-copy">
-            <span class="plan-eyebrow">MELHOR CUSTO-BENEFÍCIO</span><h3>Acesso Vitalício</h3>
-            <p class="plan-description">Faça um único pagamento e mantenha seu acesso para sempre, sem mensalidades.</p>
-            <ul><li><span>✓</span>Acesso vitalício ao conteúdo</li><li><span>✓</span>Pagamento único</li><li><span>✓</span>Todas as futuras atualizações</li></ul>
+            <span class="plan-eyebrow">ECONOMIA INTELIGENTE</span><h3>🔥 Plano Semestral</h3>
+            <p class="plan-description">Seis meses completos de acesso por um valor muito menor que o plano mensal.</p>
+            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Economize R$ 135</li><li><span>✓</span>Seis meses de preparação</li></ul>
           </div>
           <div class="card-offer">
-            <div class="price"><small>R$</small><strong>197</strong></div><span class="price-suffix">pagamento único</span>
-            <p class="price-note">Sem renovação e sem cobranças recorrentes.</p>
-            <a class="buy-button" href="https://lastlink.com/p/CF036AAF0/">QUERO ACESSO VITALÍCIO <span>→</span></a>
+            <div class="price"><small>R$</small><strong>147</strong></div><span class="price-suffix">por 6 meses</span>
+            <p class="price-note">Equivale a apenas R$ 24,50 por mês.</p>
+            <a class="buy-button" href="https://lastlink.com/p/C367A5A78/checkout-payment/">QUERO O PLANO SEMESTRAL <span>→</span></a>
+            <small class="secure">🔒 Compra segura · Acesso imediato</small>
+          </div>
+        </article>
+
+        <article class="price-card annual featured">
+          <div class="card-copy">
+            <span class="plan-eyebrow">MELHOR CUSTO-BENEFÍCIO</span><h3>👑 Plano Anual</h3>
+            <p class="plan-description">O plano escolhido por quem pretende estudar até a aprovação.</p>
+            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Economize R$ 367</li><li><span>✓</span>Um ano inteiro de preparação</li></ul>
+          </div>
+          <div class="card-offer">
+            <div class="price"><small>R$</small><strong>197</strong></div><span class="price-suffix">por 12 meses</span>
+            <p class="price-note">Equivale a apenas R$ 16,42 por mês.</p>
+            <a class="buy-button" href="https://lastlink.com/p/CE98B3216/checkout-payment/">QUERO O PLANO ANUAL <span>→</span></a>
             <small class="secure">🔒 Compra segura · Acesso imediato</small>
           </div>
         </article>
