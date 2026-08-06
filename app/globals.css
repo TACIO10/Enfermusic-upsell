@@ -4,4 +4,3 @@
 @media(max-width:760px){.page{padding-bottom:0}.vsl-shell{min-height:100vh;padding:42px 16px 58px;border-radius:0}h1{margin-bottom:44px;font-size:clamp(27px,8.2vw,42px);line-height:.98}h1 span{display:inline;padding:3px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.video-frame{border-radius:9px}.video-progress{height:7px}.offers-heading{margin-top:45px}.offers-heading p{font-size:14px}.price-card{grid-template-columns:1fr;gap:26px;padding:29px 22px}.price-card.featured::before{right:15px}.card-copy{text-align:center}.card-copy h3{font-size:28px}.card-copy ul{width:max-content;max-width:100%;margin:21px auto 0;text-align:left}.card-offer{padding:25px 0 0;border-top:1px solid #29414b;border-left:0}.price-note{min-height:auto}.buy-button{min-height:58px;font-size:12px}.deny-button{font-size:11px}}
 
 .video-frame{aspect-ratio:auto;background:#000}.video-frame vturb-smartplayer{display:block;width:100%}
-.delayed-offer{display:none}
