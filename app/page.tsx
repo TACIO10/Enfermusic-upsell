@@ -45,9 +45,9 @@ export default function Home() {
         <div
           className="video-frame"
           aria-label="Vídeo da oferta"
-          dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-6a6dfdfda5d5ced98d475173" style="display:block;margin:0 auto;width:100%"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>' }}
+          dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-6a751e06f039c5f2546047cd" style="display:block;margin:0 auto;width:100%"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>' }}
         />
-        <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6a6dfdfda5d5ced98d475173/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
+        <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6a751e06f039c5f2546047cd/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
 
         <div className="offers-heading">
           <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
