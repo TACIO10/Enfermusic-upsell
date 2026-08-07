@@ -11,3 +11,4 @@
 .price-card.annual::before{content:"MAIS ESCOLHIDO";background:#ffd65a}
 .price-card.annual .plan-eyebrow,.price-card.annual .card-copy li span{color:#ffd65a}
 .price-card.annual .buy-button{background:#ffd65a;color:#1c1605;box-shadow:0 8px 24px rgba(255,214,90,.22)}
+.delayed-offer{display:none}
