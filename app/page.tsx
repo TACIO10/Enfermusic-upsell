@@ -49,13 +49,13 @@ export default function Home() {
         />
         <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6a751e06f039c5f2546047cd/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
 
-        <div className="offers-heading delayed-offer">
+        <div className="offers-heading">
           <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
           <h2>Qual opção combina mais com você?</h2>
           <p>Todos os planos liberam o acesso imediatamente após a confirmação do pagamento.</p>
         </div>
 
-        <div className="offer-stack delayed-offer">
+        <div className="offer-stack">
           {plans.map((plan) => (
             <article className={`price-card ${plan.style}`} key={plan.name}>
               <div className="card-copy">
@@ -75,17 +75,7 @@ export default function Home() {
           ))}
         </div>
 
-        <button className="deny-button delayed-offer" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.addEventListener('player:ready', function(event) {
-            var detail = event.detail || {};
-            var config = detail.config || {};
-            var player = detail.player || document.querySelector('vturb-smartplayer');
-            var playerId = config.id || (player && player.id ? player.id.replace(/^vid-/, '') : '');
-            if (playerId !== '6a751e06f039c5f2546047cd' || !player || typeof player.displayHiddenElements !== 'function') return;
-            player.displayHiddenElements(145, ['.delayed-offer'], { persist: false });
-          });
-        ` }} />
+        <button className="deny-button" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
         <script dangerouslySetInnerHTML={{ __html: `
           function setupDenyButtons() {
             document.querySelectorAll('[id^="denyButton"]').forEach(function(button) {
