@@ -8,9 +8,13 @@ export default function Home() {
         </header>
 
         <section className="payt-offer" aria-labelledby="offer-title">
-          <span className="offer-badge">OFERTA ESPECIAL</span>
           <h2 id="offer-title">Memória Musical para sempre</h2>
           <p className="offer-description">Garanta seu acesso vitalício e continue estudando no seu ritmo, sem mensalidades ou renovações.</p>
+          <div className="offer-price" aria-label="De 597 reais por 297 reais à vista ou 12 parcelas de 30 reais e 72 centavos">
+            <span className="old-price">De R$ 597</span>
+            <div className="current-price"><span>por R$</span><strong>297</strong><small>à vista</small></div>
+            <p>ou 12x de <strong>R$ 30,72</strong></p>
+          </div>
           <ul className="offer-benefits">
             <li><span>✓</span>Acesso vitalício ao aplicativo</li>
             <li><span>✓</span>Estude quando e onde quiser</li>
