@@ -11,4 +11,4 @@
 .price-card.annual::before{content:"MAIS ESCOLHIDO";background:#ffd65a}
 .price-card.annual .plan-eyebrow,.price-card.annual .card-copy li span{color:#ffd65a}
 .price-card.annual .buy-button{background:#ffd65a;color:#1c1605;box-shadow:0 8px 24px rgba(255,214,90,.22)}
-.delayed-offer{display:none}
+.hero-copy{max-width:850px;margin:0 auto 64px}.hero-copy h1{margin:0;color:#fff;font-size:clamp(36px,5.4vw,62px);font-weight:900;letter-spacing:-.055em;line-height:1.02;text-wrap:balance}.hero-copy h1 strong{color:#b8f326}.hero-copy p{max-width:760px;margin:26px auto 0;color:#c8d5da;font-size:clamp(18px,2.2vw,23px);line-height:1.55;text-wrap:balance}.hero-copy p strong{color:#fff}@media(max-width:760px){.hero-copy{margin-bottom:48px}.hero-copy h1{font-size:clamp(32px,9.5vw,46px);line-height:1.06}.hero-copy p{margin-top:22px;font-size:18px;line-height:1.5}}

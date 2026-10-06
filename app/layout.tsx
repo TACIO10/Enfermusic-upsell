@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Espere! Sua compra ainda não está completa",
-  description: "Assista ao recado antes de concluir sua compra.",
+  title: "Memória Musical para sempre",
+  description: "Tenha acesso vitalício ao Memória Musical, sem mensalidades ou renovações.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

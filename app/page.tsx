@@ -41,21 +41,18 @@ export default function Home() {
   return (
     <main className="page">
       <section className="vsl-shell" aria-labelledby="page-title">
-        <h1 id="page-title"><span>ESPERE! SUA COMPRA AINDA NÃO</span><span>ESTÁ COMPLETA...</span></h1>
-        <div
-          className="video-frame"
-          aria-label="Vídeo da oferta"
-          dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-6a775c00aef224966a5124a6" style="display:block;margin:0 auto;width:100%"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>' }}
-        />
-        <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6a775c00aef224966a5124a6/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
+        <header className="hero-copy">
+          <h1 id="page-title">Você comprou o plano mensal ou anual… mas e se nunca mais precisasse se preocupar com <strong>renovação?</strong></h1>
+          <p>Agora você pode ter o <strong>Memória Musical para sempre</strong>, com <strong>acesso vitalício ao aplicativo</strong> e estudar no seu ritmo, sem mensalidades ou renovações.</p>
+        </header>
 
-        <div className="offers-heading delayed-offer">
+        <div className="offers-heading">
           <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
           <h2>Qual opção combina mais com você?</h2>
           <p>Todos os planos liberam o acesso imediatamente após a confirmação do pagamento.</p>
         </div>
 
-        <div className="offer-stack delayed-offer">
+        <div className="offer-stack">
           {plans.map((plan) => (
             <article className={`price-card ${plan.style}`} key={plan.name}>
               <div className="card-copy">
@@ -75,17 +72,7 @@ export default function Home() {
           ))}
         </div>
 
-        <button className="deny-button delayed-offer" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.addEventListener('player:ready', function(event) {
-            var detail = event.detail || {};
-            var config = detail.config || {};
-            var player = detail.player || document.querySelector('vturb-smartplayer');
-            var playerId = config.id || (player && player.id ? player.id.replace(/^vid-/, '') : '');
-            if (playerId !== '6a775c00aef224966a5124a6' || !player || typeof player.displayHiddenElements !== 'function') return;
-            player.displayHiddenElements(140, ['.delayed-offer'], { persist: false });
-          });
-        ` }} />
+        <button className="deny-button" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
         <script dangerouslySetInnerHTML={{ __html: `
           function setupDenyButtons() {
             document.querySelectorAll('[id^="denyButton"]').forEach(function(button) {
