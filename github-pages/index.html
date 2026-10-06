@@ -24,55 +24,19 @@
         <p>Agora você pode ter o <strong>Memória Musical para sempre</strong>, com <strong>acesso vitalício ao aplicativo</strong> e estudar no seu ritmo, sem mensalidades ou renovações.</p>
       </header>
 
-      <div class="offers-heading">
-        <span>ESCOLHA COMO VOCÊ QUER CONTINUAR</span>
-        <h2>Qual opção combina mais com você?</h2>
-        <p>Todos os planos liberam o acesso imediatamente após a confirmação do pagamento.</p>
-      </div>
-
-      <div class="offer-stack">
-        <article class="price-card monthly">
-          <div class="card-copy">
-            <span class="plan-eyebrow">FLEXIBILIDADE TOTAL</span><h3>📅 Plano Mensal</h3>
-            <p class="plan-description">Acesso completo ao App de Simulados com cobrança mensal.</p>
-            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Cobrança mensal</li><li><span>✓</span>Cancele quando quiser</li></ul>
-          </div>
-          <div class="card-offer">
-            <div class="price"><small>R$</small><strong>19,90</strong></div><span class="price-suffix">por mês</span>
-            <p class="price-note">Assine mês a mês e cancele quando quiser.</p>
-            <a class="buy-button" href="https://lastlink.com/p/CF626C39E/checkout-payment/">QUERO O PLANO MENSAL <span>→</span></a>
-            <small class="secure">🔒 Compra segura · Acesso imediato</small>
-          </div>
-        </article>
-
-        <article class="price-card semestral">
-          <div class="card-copy">
-            <span class="plan-eyebrow">ECONOMIA INTELIGENTE</span><h3>🔥 Plano Semestral</h3>
-            <p class="plan-description">Seis meses completos de acesso por um valor muito menor que o plano mensal.</p>
-            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Economize R$ 72,40</li><li><span>✓</span>Seis meses de preparação</li></ul>
-          </div>
-          <div class="card-offer">
-            <div class="price"><small>R$</small><strong>47</strong></div><span class="price-suffix">por 6 meses</span>
-            <p class="price-note">Equivale a apenas R$ 7,83 por mês.</p>
-            <a class="buy-button" href="https://lastlink.com/p/C367A5A78/checkout-payment/">QUERO O PLANO SEMESTRAL <span>→</span></a>
-            <small class="secure">🔒 Compra segura · Acesso imediato</small>
-          </div>
-        </article>
-
-        <article class="price-card annual featured">
-          <div class="card-copy">
-            <span class="plan-eyebrow">MELHOR CUSTO-BENEFÍCIO</span><h3>👑 Plano Anual</h3>
-            <p class="plan-description">O plano escolhido por quem pretende estudar até a aprovação.</p>
-            <ul><li><span>✓</span>Acesso completo ao App de Simulados</li><li><span>✓</span>Economize R$ 151,80</li><li><span>✓</span>Um ano inteiro de preparação</li></ul>
-          </div>
-          <div class="card-offer">
-            <div class="price"><small>R$</small><strong>87</strong></div><span class="price-suffix">por 12 meses</span>
-            <p class="price-note">Equivale a apenas R$ 7,25 por mês.</p>
-            <a class="buy-button" href="https://lastlink.com/p/CE98B3216/checkout-payment/">QUERO O PLANO ANUAL <span>→</span></a>
-            <small class="secure">🔒 Compra segura · Acesso imediato</small>
-          </div>
-        </article>
-      </div>
+      <section class="payt-offer" aria-labelledby="offer-title">
+        <span class="offer-badge">OFERTA ESPECIAL</span>
+        <h2 id="offer-title">Memória Musical para sempre</h2>
+        <p class="offer-description">Garanta seu acesso vitalício e continue estudando no seu ritmo, sem mensalidades ou renovações.</p>
+        <ul class="offer-benefits">
+          <li><span>✓</span>Acesso vitalício ao aplicativo</li>
+          <li><span>✓</span>Estude quando e onde quiser</li>
+          <li><span>✓</span>Sem novas mensalidades</li>
+        </ul>
+        <a href="#" payt_action="oneclick_buy" data-object="R6VDOP-45E5E8" class="payt-buy-button">ADQUIRIR AGORA</a>
+        <select payt_element="installment" data-object="R6VDOP-45E5E8" style="display:none"></select>
+        <small class="secure-note">🔒 Compra segura · Liberação imediata</small>
+      </section>
 
       <button class="deny-button" id="denyButton4deaf72">Não, obrigado. Quero continuar sem esta oferta.</button>
     </section>
@@ -90,5 +54,6 @@
     }
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setupDenyButtons); else setupDenyButtons();
   </script>
+  <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/LXMEOB.js"></script>
 </body>
 </html>
