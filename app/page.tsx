@@ -2,10 +2,24 @@ export default function Home() {
   return (
     <main className="page">
       <section className="vsl-shell" aria-labelledby="page-title">
-        <header className="hero-copy">
-          <h1 id="page-title">Você comprou o plano mensal ou anual… mas e se nunca mais precisasse se preocupar com <strong>renovação?</strong></h1>
-          <p>Agora você pode ter o <strong>Memória Musical para sempre</strong>, com <strong>acesso vitalício ao aplicativo</strong> e estudar no seu ritmo, sem mensalidades ou renovações.</p>
+        <div className="purchase-warning" role="alert"><strong>Importante:</strong> NÃO feche esta página nem clique no botão voltar. Isso pode gerar problemas com o seu pedido.</div>
+
+        <header className="order-status">
+          <span aria-hidden="true">⚠️</span>
+          <div>
+            <h1 id="page-title">Seu pedido ainda não foi concluído!</h1>
+            <p>Veja a mensagem abaixo</p>
+          </div>
         </header>
+
+        <section className="video-coming" aria-label="Espaço reservado para o vídeo">
+          <span className="play-symbol" aria-hidden="true">▶</span>
+          <h2>Bem-vindo, novo membro!</h2>
+          <p>Clique no play e assista</p>
+          <small>O vídeo será adicionado em breve.</small>
+        </section>
+
+        <p className="watch-instruction"><strong>Faça isso agora:</strong> assista à mensagem acima sobre o Memória Musical. Sua condição especial aparece logo abaixo.</p>
 
         <section className="payt-offer" aria-labelledby="offer-title">
           <h2 id="offer-title">Memória Musical para sempre</h2>
