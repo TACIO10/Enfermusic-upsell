@@ -5,7 +5,6 @@ export default function Home() {
         <div className="purchase-warning" role="alert"><strong>Importante:</strong> NÃO feche esta página nem clique no botão voltar. Isso pode gerar problemas com o seu pedido.</div>
 
         <header className="order-status">
-          <span aria-hidden="true">⚠️</span>
           <div>
             <h1 id="page-title">Seu pedido ainda não foi concluído!</h1>
             <p>Veja a mensagem abaixo</p>
