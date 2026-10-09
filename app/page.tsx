@@ -42,14 +42,11 @@ export default function Home() {
         <button className="deny-button delayed-offer" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
         <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/LXMEOB.js" />
         <script dangerouslySetInnerHTML={{ __html: `
-          document.addEventListener('player:ready', function(event) {
-            var detail = event.detail || {};
-            var config = detail.config || {};
-            var player = detail.player || document.querySelector('vturb-smartplayer');
-            var playerId = config.id || (player && player.id ? player.id.replace(/^vid-/, '') : '');
-            if (playerId !== '6ac82242b7192639646f535d' || !player || typeof player.displayHiddenElements !== 'function') return;
-            player.displayHiddenElements(259, ['.delayed-offer'], { persist: false });
-          });
+          setTimeout(function() {
+            document.querySelectorAll('.delayed-offer').forEach(function(element) {
+              element.classList.remove('delayed-offer');
+            });
+          }, 259000);
         ` }} />
         <script dangerouslySetInnerHTML={{ __html: `
           function setupDenyButtons() {
