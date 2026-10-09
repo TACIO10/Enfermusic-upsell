@@ -23,10 +23,9 @@ export default function Home() {
         <section className="payt-offer" aria-labelledby="offer-title">
           <h2 id="offer-title">Memória Musical para sempre</h2>
           <p className="offer-description">Garanta seu acesso vitalício e continue estudando no seu ritmo, sem mensalidades ou renovações.</p>
-          <div className="offer-price" aria-label="De 597 reais por 297 reais à vista ou 12 parcelas de 30 reais e 72 centavos">
-            <span className="old-price">De R$ 597</span>
-            <div className="current-price"><span>por R$</span><strong>297</strong><small>à vista</small></div>
-            <p>ou 12x de <strong>R$ 30,72</strong></p>
+          <div className="offer-price" aria-label="De 297 reais por 97 reais à vista">
+            <span className="old-price">De R$ 297</span>
+            <div className="current-price"><span>por R$</span><strong>97</strong><small>à vista</small></div>
           </div>
           <ul className="offer-benefits">
             <li><span>✓</span>Acesso vitalício ao aplicativo</li>
