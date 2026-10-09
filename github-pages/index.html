@@ -28,12 +28,17 @@
         </div>
       </header>
 
-      <section class="video-coming" aria-label="Espaço reservado para o vídeo">
-        <span class="play-symbol" aria-hidden="true">▶</span>
-        <h2>Bem-vindo, novo membro!</h2>
-        <p>Clique no play e assista</p>
-        <small>O vídeo será adicionado em breve.</small>
-      </section>
+      <div class="video-frame" aria-label="Vídeo com mensagem importante">
+        <vturb-smartplayer id="vid-6ac82242b7192639646f535d" style="display:block;margin:0 auto;width:100%">
+          <div class="vturb-player-placeholder" style="position:relative;width:100%;padding:66.74907292954263% 0 0;z-index:0;background-color:black"></div>
+        </vturb-smartplayer>
+      </div>
+      <script>
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6ac82242b7192639646f535d/v4/player.js";
+        s.async=true;
+        document.head.appendChild(s);
+      </script>
 
       <p class="watch-instruction"><strong>Faça isso agora:</strong> assista à mensagem acima sobre o Memória Musical. Sua condição especial aparece logo abaixo.</p>
 
