@@ -20,7 +20,7 @@ export default function Home() {
 
         <p className="watch-instruction"><strong>Faça isso agora:</strong> assista à mensagem acima sobre o Memória Musical. Sua condição especial aparece logo abaixo.</p>
 
-        <section className="payt-offer" aria-labelledby="offer-title">
+        <section className="payt-offer delayed-offer" aria-labelledby="offer-title">
           <h2 id="offer-title">ENTENDA COM AS AULAS.<br />MEMORIZE COM AS MÚSICAS.</h2>
           <p className="offer-description">Adicione o Memória Musical Explica à sua preparação e tenha aulas explicativas para compreender os principais temas de concursos de enfermagem.</p>
           <div className="offer-price" aria-label="De 297 reais por 12 parcelas de 10 reais e 3 centavos, ou 97 reais à vista">
@@ -39,8 +39,18 @@ export default function Home() {
           <small className="secure-note">🔒 Oferta exclusiva após a compra • Confirmação rápida</small>
         </section>
 
-        <button className="deny-button" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
+        <button className="deny-button delayed-offer" id="denyButton4deaf72" type="button">Não, obrigado. Quero continuar sem esta oferta.</button>
         <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/LXMEOB.js" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          document.addEventListener('player:ready', function(event) {
+            var detail = event.detail || {};
+            var config = detail.config || {};
+            var player = detail.player || document.querySelector('vturb-smartplayer');
+            var playerId = config.id || (player && player.id ? player.id.replace(/^vid-/, '') : '');
+            if (playerId !== '6ac82242b7192639646f535d' || !player || typeof player.displayHiddenElements !== 'function') return;
+            player.displayHiddenElements(259, ['.delayed-offer'], { persist: false });
+          });
+        ` }} />
         <script dangerouslySetInnerHTML={{ __html: `
           function setupDenyButtons() {
             document.querySelectorAll('[id^="denyButton"]').forEach(function(button) {
