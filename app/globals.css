@@ -5,6 +5,8 @@
 
 .video-frame{aspect-ratio:auto;background:#000}.video-frame vturb-smartplayer{display:block;width:100%}
 .delayed-offer{display:none}
+html,body{overflow-x:hidden}
+@media(max-width:420px){.payt-offer{width:100%;padding:28px 14px}.payt-offer h2{font-size:26px;overflow-wrap:anywhere}.offer-description{font-size:15px}.current-price{flex-wrap:wrap;row-gap:4px}.current-price strong{font-size:52px}.current-price>span{font-size:14px}.offer-benefits{width:100%}.offer-benefits li{align-items:flex-start;min-width:0}.offer-benefits li span{flex:0 0 23px}.payt-buy-button{font-size:15px;overflow-wrap:anywhere}}
 .price-card.semestral{border-color:#6651a0;background:linear-gradient(145deg,#151d31,#0b1722)}
 .price-card.semestral .plan-eyebrow,.price-card.semestral .card-copy li span{color:#b8a7ff}
 .price-card.semestral .buy-button{background:#9e87f7;color:#100d1d;box-shadow:0 8px 24px rgba(158,135,247,.22)}
