@@ -14,9 +14,9 @@ export default function Home() {
         <div
           className="video-frame"
           aria-label="Vídeo com mensagem importante"
-          dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-6ac82242b7192639646f535d" style="display:block;margin:0 auto;width:100%"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:66.74907292954263% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>' }}
+          dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-6ad6e00b0a87c725d2c60ece" style="display:block;margin:0 auto;width:100%;max-width:400px"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:177.77777777777777% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>' }}
         />
-        <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6ac82242b7192639646f535d/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
+        <script dangerouslySetInnerHTML={{ __html: 'var s=document.createElement("script");s.src="https://scripts.converteai.net/f7f63c56-fc11-4d6b-889e-71d2f24f657c/players/6ad6e00b0a87c725d2c60ece/v4/player.js",s.async=true,document.head.appendChild(s);' }} />
 
         <p className="watch-instruction"><strong>Faça isso agora:</strong> assista à mensagem acima sobre o Memória Musical. Sua condição especial aparece logo abaixo.</p>
 
